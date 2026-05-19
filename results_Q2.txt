@@ -1,0 +1,968 @@
+C:\Users\omar\AppData\Local\Programs\Python\Python313\python.exe C:\Users\omar\Desktop\LAB1_Q2\main.py 
+
+========================================
+Running instance: data/scp41.txt
+Problem size: m=200 elements, n=1000 sets
+Greedy: cost=463, time=0.0374s, feasible=True
+
+--- Required Config: Pop=300 Gen=200 C=0.8 M=0.05 one_point ---
+Early stopping at generation 126, best_cost=432
+Seed 42: cost=432, time=36.16s, generations=126, feasible=True
+Early stopping at generation 101, best_cost=433
+Seed 123: cost=433, time=29.08s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=433
+Seed 999: cost=433, time=24.92s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=433
+Seed 2026: cost=433, time=27.19s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=433
+Seed 7: cost=433, time=25.58s, generations=101, feasible=True
+
+Summary for config:
+Best GA cost: 432 achieved by seed 42
+Average GA cost: 432.80
+Worst GA cost: 433
+Std GA cost: 0.45
+Average GA time: 28.59s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 106.00
+
+--- Config: Pop=300 Gen=500 C=0.91 M=0.015 uniform ---
+Early stopping at generation 101, best_cost=433
+Seed 42: cost=433, time=18.36s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=433
+Seed 123: cost=433, time=17.85s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=433
+Seed 999: cost=433, time=17.70s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=433
+Seed 2026: cost=433, time=17.47s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=433
+Seed 7: cost=433, time=17.31s, generations=101, feasible=True
+
+Summary for config:
+Best GA cost: 433 achieved by seed 42
+Average GA cost: 433.00
+Worst GA cost: 433
+Std GA cost: 0.00
+Average GA time: 17.74s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 101.00
+
+--- Crossover Only: Pop=300 Gen=200 C=0.9 M=0 uniform ---
+Early stopping at generation 101, best_cost=433
+Seed 42: cost=433, time=9.21s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=433
+Seed 123: cost=433, time=10.01s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=433
+Seed 999: cost=433, time=9.14s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=433
+Seed 2026: cost=433, time=9.06s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=433
+Seed 7: cost=433, time=9.21s, generations=101, feasible=True
+
+Summary for config:
+Best GA cost: 433 achieved by seed 42
+Average GA cost: 433.00
+Worst GA cost: 433
+Std GA cost: 0.00
+Average GA time: 9.33s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 101.00
+
+--- Mutation Only: Pop=300 Gen=200 C=0 M=0.015 uniform ---
+Early stopping at generation 101, best_cost=433
+Seed 42: cost=433, time=14.09s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=433
+Seed 123: cost=433, time=24.82s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=433
+Seed 999: cost=433, time=17.21s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=433
+Seed 2026: cost=433, time=16.36s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=433
+Seed 7: cost=433, time=15.90s, generations=101, feasible=True
+
+Summary for config:
+Best GA cost: 433 achieved by seed 42
+Average GA cost: 433.00
+Worst GA cost: 433
+Std GA cost: 0.00
+Average GA time: 17.68s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 101.00
+
+========================================
+Running instance: data/scp42.txt
+Problem size: m=200 elements, n=1000 sets
+Greedy: cost=582, time=0.0357s, feasible=True
+
+--- Required Config: Pop=300 Gen=200 C=0.8 M=0.05 one_point ---
+Early stopping at generation 134, best_cost=518
+Seed 42: cost=518, time=35.56s, generations=134, feasible=True
+Early stopping at generation 131, best_cost=512
+Seed 123: cost=512, time=36.58s, generations=131, feasible=True
+Early stopping at generation 175, best_cost=512
+Seed 999: cost=512, time=45.19s, generations=175, feasible=True
+Early stopping at generation 131, best_cost=512
+Seed 2026: cost=512, time=31.84s, generations=131, feasible=True
+Early stopping at generation 186, best_cost=512
+Seed 7: cost=512, time=42.78s, generations=186, feasible=True
+
+Summary for config:
+Best GA cost: 512 achieved by seed 123
+Average GA cost: 513.20
+Worst GA cost: 518
+Std GA cost: 2.68
+Average GA time: 38.39s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 151.40
+
+--- Config: Pop=300 Gen=500 C=0.91 M=0.015 uniform ---
+Early stopping at generation 102, best_cost=518
+Seed 42: cost=518, time=16.59s, generations=102, feasible=True
+Early stopping at generation 112, best_cost=512
+Seed 123: cost=512, time=18.08s, generations=112, feasible=True
+Early stopping at generation 101, best_cost=512
+Seed 999: cost=512, time=15.98s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=512
+Seed 2026: cost=512, time=16.14s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=512
+Seed 7: cost=512, time=16.50s, generations=101, feasible=True
+
+Summary for config:
+Best GA cost: 512 achieved by seed 123
+Average GA cost: 513.20
+Worst GA cost: 518
+Std GA cost: 2.68
+Average GA time: 16.66s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 103.40
+
+--- Crossover Only: Pop=300 Gen=200 C=0.9 M=0 uniform ---
+Early stopping at generation 101, best_cost=523
+Seed 42: cost=523, time=9.11s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=513
+Seed 123: cost=513, time=9.25s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=523
+Seed 999: cost=523, time=9.31s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=521
+Seed 2026: cost=521, time=9.83s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=514
+Seed 7: cost=514, time=9.24s, generations=101, feasible=True
+
+Summary for config:
+Best GA cost: 513 achieved by seed 123
+Average GA cost: 518.80
+Worst GA cost: 523
+Std GA cost: 4.92
+Average GA time: 9.35s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 101.00
+
+--- Mutation Only: Pop=300 Gen=200 C=0 M=0.015 uniform ---
+Early stopping at generation 131, best_cost=521
+Seed 42: cost=521, time=21.07s, generations=131, feasible=True
+Early stopping at generation 153, best_cost=512
+Seed 123: cost=512, time=26.63s, generations=153, feasible=True
+Early stopping at generation 122, best_cost=512
+Seed 999: cost=512, time=21.62s, generations=122, feasible=True
+Early stopping at generation 126, best_cost=512
+Seed 2026: cost=512, time=19.54s, generations=126, feasible=True
+Early stopping at generation 119, best_cost=512
+Seed 7: cost=512, time=17.75s, generations=119, feasible=True
+
+Summary for config:
+Best GA cost: 512 achieved by seed 123
+Average GA cost: 513.80
+Worst GA cost: 521
+Std GA cost: 4.02
+Average GA time: 21.32s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 130.20
+
+========================================
+Running instance: data/scp43.txt
+Problem size: m=200 elements, n=1000 sets
+Greedy: cost=598, time=0.0239s, feasible=True
+
+--- Required Config: Pop=300 Gen=200 C=0.8 M=0.05 one_point ---
+Early stopping at generation 103, best_cost=522
+Seed 42: cost=522, time=29.76s, generations=103, feasible=True
+Early stopping at generation 179, best_cost=522
+Seed 123: cost=522, time=39.57s, generations=179, feasible=True
+Early stopping at generation 171, best_cost=519
+Seed 999: cost=519, time=40.11s, generations=171, feasible=True
+Early stopping at generation 189, best_cost=521
+Seed 2026: cost=521, time=48.73s, generations=189, feasible=True
+Seed 7: cost=519, time=45.58s, generations=200, feasible=True
+
+Summary for config:
+Best GA cost: 519 achieved by seed 999
+Average GA cost: 520.60
+Worst GA cost: 522
+Std GA cost: 1.52
+Average GA time: 40.75s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 168.40
+
+--- Config: Pop=300 Gen=500 C=0.91 M=0.015 uniform ---
+Early stopping at generation 144, best_cost=516
+Seed 42: cost=516, time=23.25s, generations=144, feasible=True
+Early stopping at generation 114, best_cost=516
+Seed 123: cost=516, time=17.44s, generations=114, feasible=True
+Early stopping at generation 119, best_cost=516
+Seed 999: cost=516, time=19.19s, generations=119, feasible=True
+Early stopping at generation 101, best_cost=522
+Seed 2026: cost=522, time=15.97s, generations=101, feasible=True
+Early stopping at generation 121, best_cost=516
+Seed 7: cost=516, time=19.17s, generations=121, feasible=True
+
+Summary for config:
+Best GA cost: 516 achieved by seed 42
+Average GA cost: 517.20
+Worst GA cost: 522
+Std GA cost: 2.68
+Average GA time: 19.00s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 119.80
+
+--- Crossover Only: Pop=300 Gen=200 C=0.9 M=0 uniform ---
+Early stopping at generation 101, best_cost=520
+Seed 42: cost=520, time=9.16s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=528
+Seed 123: cost=528, time=8.91s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=526
+Seed 999: cost=526, time=9.10s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=520
+Seed 2026: cost=520, time=8.94s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=526
+Seed 7: cost=526, time=9.90s, generations=101, feasible=True
+
+Summary for config:
+Best GA cost: 520 achieved by seed 42
+Average GA cost: 524.00
+Worst GA cost: 528
+Std GA cost: 3.74
+Average GA time: 9.20s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 101.00
+
+--- Mutation Only: Pop=300 Gen=200 C=0 M=0.015 uniform ---
+Early stopping at generation 157, best_cost=516
+Seed 42: cost=516, time=23.62s, generations=157, feasible=True
+Early stopping at generation 107, best_cost=520
+Seed 123: cost=520, time=17.33s, generations=107, feasible=True
+Early stopping at generation 110, best_cost=516
+Seed 999: cost=516, time=17.54s, generations=110, feasible=True
+Early stopping at generation 115, best_cost=516
+Seed 2026: cost=516, time=18.20s, generations=115, feasible=True
+Early stopping at generation 195, best_cost=516
+Seed 7: cost=516, time=28.85s, generations=195, feasible=True
+
+Summary for config:
+Best GA cost: 516 achieved by seed 42
+Average GA cost: 516.80
+Worst GA cost: 520
+Std GA cost: 1.79
+Average GA time: 21.11s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 136.80
+
+========================================
+Running instance: data/scp44.txt
+Problem size: m=200 elements, n=1000 sets
+Greedy: cost=548, time=0.0255s, feasible=True
+
+--- Required Config: Pop=300 Gen=200 C=0.8 M=0.05 one_point ---
+Early stopping at generation 121, best_cost=495
+Seed 42: cost=495, time=33.97s, generations=121, feasible=True
+Early stopping at generation 121, best_cost=495
+Seed 123: cost=495, time=33.22s, generations=121, feasible=True
+Early stopping at generation 101, best_cost=495
+Seed 999: cost=495, time=28.73s, generations=101, feasible=True
+Early stopping at generation 107, best_cost=495
+Seed 2026: cost=495, time=28.53s, generations=107, feasible=True
+Early stopping at generation 101, best_cost=495
+Seed 7: cost=495, time=24.23s, generations=101, feasible=True
+
+Summary for config:
+Best GA cost: 495 achieved by seed 42
+Average GA cost: 495.00
+Worst GA cost: 495
+Std GA cost: 0.00
+Average GA time: 29.74s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 110.20
+
+--- Config: Pop=300 Gen=500 C=0.91 M=0.015 uniform ---
+Early stopping at generation 109, best_cost=494
+Seed 42: cost=494, time=17.67s, generations=109, feasible=True
+Early stopping at generation 101, best_cost=494
+Seed 123: cost=494, time=16.44s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=494
+Seed 999: cost=494, time=16.55s, generations=101, feasible=True
+Early stopping at generation 105, best_cost=494
+Seed 2026: cost=494, time=17.12s, generations=105, feasible=True
+Early stopping at generation 101, best_cost=494
+Seed 7: cost=494, time=16.69s, generations=101, feasible=True
+
+Summary for config:
+Best GA cost: 494 achieved by seed 42
+Average GA cost: 494.00
+Worst GA cost: 494
+Std GA cost: 0.00
+Average GA time: 16.89s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 103.40
+
+--- Crossover Only: Pop=300 Gen=200 C=0.9 M=0 uniform ---
+Early stopping at generation 101, best_cost=500
+Seed 42: cost=500, time=9.17s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=500
+Seed 123: cost=500, time=9.19s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=495
+Seed 999: cost=495, time=9.31s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=500
+Seed 2026: cost=500, time=9.05s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=500
+Seed 7: cost=500, time=9.09s, generations=101, feasible=True
+
+Summary for config:
+Best GA cost: 495 achieved by seed 999
+Average GA cost: 499.00
+Worst GA cost: 500
+Std GA cost: 2.24
+Average GA time: 9.16s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 101.00
+
+--- Mutation Only: Pop=300 Gen=200 C=0 M=0.015 uniform ---
+Early stopping at generation 101, best_cost=494
+Seed 42: cost=494, time=14.19s, generations=101, feasible=True
+Early stopping at generation 136, best_cost=494
+Seed 123: cost=494, time=18.84s, generations=136, feasible=True
+Early stopping at generation 101, best_cost=495
+Seed 999: cost=495, time=14.27s, generations=101, feasible=True
+Early stopping at generation 109, best_cost=495
+Seed 2026: cost=495, time=15.28s, generations=109, feasible=True
+Early stopping at generation 101, best_cost=494
+Seed 7: cost=494, time=14.17s, generations=101, feasible=True
+
+Summary for config:
+Best GA cost: 494 achieved by seed 42
+Average GA cost: 494.40
+Worst GA cost: 495
+Std GA cost: 0.55
+Average GA time: 15.35s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 109.60
+
+========================================
+Running instance: data/scp51.txt
+Problem size: m=200 elements, n=2000 sets
+Greedy: cost=289, time=0.0392s, feasible=True
+
+--- Required Config: Pop=300 Gen=200 C=0.8 M=0.05 one_point ---
+Early stopping at generation 110, best_cost=264
+Seed 42: cost=263, time=29.11s, generations=110, feasible=True
+Early stopping at generation 149, best_cost=263
+Seed 123: cost=263, time=40.43s, generations=149, feasible=True
+Early stopping at generation 194, best_cost=262
+Seed 999: cost=262, time=52.92s, generations=194, feasible=True
+Early stopping at generation 156, best_cost=264
+Seed 2026: cost=263, time=40.79s, generations=156, feasible=True
+Early stopping at generation 111, best_cost=263
+Seed 7: cost=263, time=29.66s, generations=111, feasible=True
+
+Summary for config:
+Best GA cost: 262 achieved by seed 999
+Average GA cost: 262.80
+Worst GA cost: 263
+Std GA cost: 0.45
+Average GA time: 38.58s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 144.00
+
+--- Config: Pop=300 Gen=500 C=0.91 M=0.015 uniform ---
+Early stopping at generation 101, best_cost=262
+Seed 42: cost=262, time=26.63s, generations=101, feasible=True
+Early stopping at generation 104, best_cost=262
+Seed 123: cost=262, time=28.12s, generations=104, feasible=True
+Early stopping at generation 101, best_cost=262
+Seed 999: cost=262, time=26.85s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=262
+Seed 2026: cost=262, time=26.86s, generations=101, feasible=True
+Early stopping at generation 114, best_cost=262
+Seed 7: cost=262, time=38.77s, generations=114, feasible=True
+
+Summary for config:
+Best GA cost: 262 achieved by seed 42
+Average GA cost: 262.00
+Worst GA cost: 262
+Std GA cost: 0.00
+Average GA time: 29.45s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 104.20
+
+--- Crossover Only: Pop=300 Gen=200 C=0.9 M=0 uniform ---
+Early stopping at generation 101, best_cost=269
+Seed 42: cost=269, time=15.12s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=269
+Seed 123: cost=269, time=15.60s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=269
+Seed 999: cost=269, time=15.20s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=269
+Seed 2026: cost=269, time=15.10s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=269
+Seed 7: cost=269, time=14.99s, generations=101, feasible=True
+
+Summary for config:
+Best GA cost: 269 achieved by seed 42
+Average GA cost: 269.00
+Worst GA cost: 269
+Std GA cost: 0.00
+Average GA time: 15.20s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 101.00
+
+--- Mutation Only: Pop=300 Gen=200 C=0 M=0.015 uniform ---
+Early stopping at generation 101, best_cost=262
+Seed 42: cost=262, time=22.02s, generations=101, feasible=True
+Early stopping at generation 115, best_cost=262
+Seed 123: cost=262, time=24.41s, generations=115, feasible=True
+Early stopping at generation 101, best_cost=262
+Seed 999: cost=262, time=21.91s, generations=101, feasible=True
+Early stopping at generation 103, best_cost=262
+Seed 2026: cost=262, time=22.06s, generations=103, feasible=True
+Early stopping at generation 108, best_cost=262
+Seed 7: cost=262, time=23.45s, generations=108, feasible=True
+
+Summary for config:
+Best GA cost: 262 achieved by seed 42
+Average GA cost: 262.00
+Worst GA cost: 262
+Std GA cost: 0.00
+Average GA time: 22.77s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 105.60
+
+========================================
+Running instance: data/scp52.txt
+Problem size: m=200 elements, n=2000 sets
+Greedy: cost=348, time=0.0411s, feasible=True
+
+--- Required Config: Pop=300 Gen=200 C=0.8 M=0.05 one_point ---
+Seed 42: cost=316, time=51.60s, generations=200, feasible=True
+Seed 123: cost=319, time=52.93s, generations=200, feasible=True
+Early stopping at generation 122, best_cost=320
+Seed 999: cost=319, time=32.72s, generations=122, feasible=True
+Seed 2026: cost=308, time=55.05s, generations=200, feasible=True
+Early stopping at generation 140, best_cost=324
+Seed 7: cost=324, time=39.16s, generations=140, feasible=True
+
+Summary for config:
+Best GA cost: 308 achieved by seed 2026
+Average GA cost: 317.20
+Worst GA cost: 324
+Std GA cost: 5.89
+Average GA time: 46.29s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 172.40
+
+--- Config: Pop=300 Gen=500 C=0.91 M=0.015 uniform ---
+Early stopping at generation 142, best_cost=307
+Seed 42: cost=307, time=39.95s, generations=142, feasible=True
+Early stopping at generation 201, best_cost=306
+Seed 123: cost=306, time=51.51s, generations=201, feasible=True
+Early stopping at generation 170, best_cost=305
+Seed 999: cost=305, time=46.68s, generations=170, feasible=True
+Early stopping at generation 103, best_cost=309
+Seed 2026: cost=309, time=30.25s, generations=103, feasible=True
+Early stopping at generation 101, best_cost=316
+Seed 7: cost=316, time=28.84s, generations=101, feasible=True
+
+Summary for config:
+Best GA cost: 305 achieved by seed 999
+Average GA cost: 308.60
+Worst GA cost: 316
+Std GA cost: 4.39
+Average GA time: 39.45s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 143.40
+
+--- Crossover Only: Pop=300 Gen=200 C=0.9 M=0 uniform ---
+Early stopping at generation 101, best_cost=316
+Seed 42: cost=316, time=16.19s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=322
+Seed 123: cost=322, time=15.83s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=316
+Seed 999: cost=316, time=15.79s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=316
+Seed 2026: cost=316, time=16.04s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=313
+Seed 7: cost=313, time=15.76s, generations=101, feasible=True
+
+Summary for config:
+Best GA cost: 313 achieved by seed 7
+Average GA cost: 316.60
+Worst GA cost: 322
+Std GA cost: 3.29
+Average GA time: 15.92s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 101.00
+
+--- Mutation Only: Pop=300 Gen=200 C=0 M=0.015 uniform ---
+Early stopping at generation 127, best_cost=307
+Seed 42: cost=307, time=29.03s, generations=127, feasible=True
+Early stopping at generation 117, best_cost=320
+Seed 123: cost=320, time=25.86s, generations=117, feasible=True
+Seed 999: cost=307, time=42.29s, generations=200, feasible=True
+Early stopping at generation 125, best_cost=318
+Seed 2026: cost=318, time=26.31s, generations=125, feasible=True
+Early stopping at generation 110, best_cost=309
+Seed 7: cost=309, time=23.93s, generations=110, feasible=True
+
+Summary for config:
+Best GA cost: 307 achieved by seed 42
+Average GA cost: 312.20
+Worst GA cost: 320
+Std GA cost: 6.30
+Average GA time: 29.48s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 135.80
+
+========================================
+Running instance: data/scp53.txt
+Problem size: m=200 elements, n=2000 sets
+Greedy: cost=246, time=0.0401s, feasible=True
+
+--- Required Config: Pop=300 Gen=200 C=0.8 M=0.05 one_point ---
+Seed 42: cost=226, time=51.41s, generations=200, feasible=True
+Early stopping at generation 104, best_cost=230
+Seed 123: cost=230, time=27.83s, generations=104, feasible=True
+Early stopping at generation 168, best_cost=228
+Seed 999: cost=228, time=44.23s, generations=168, feasible=True
+Early stopping at generation 101, best_cost=229
+Seed 2026: cost=229, time=27.20s, generations=101, feasible=True
+Early stopping at generation 102, best_cost=229
+Seed 7: cost=229, time=26.97s, generations=102, feasible=True
+
+Summary for config:
+Best GA cost: 226 achieved by seed 42
+Average GA cost: 228.40
+Worst GA cost: 230
+Std GA cost: 1.52
+Average GA time: 35.53s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 135.00
+
+--- Config: Pop=300 Gen=500 C=0.91 M=0.015 uniform ---
+Early stopping at generation 106, best_cost=228
+Seed 42: cost=228, time=28.41s, generations=106, feasible=True
+Early stopping at generation 105, best_cost=229
+Seed 123: cost=229, time=27.29s, generations=105, feasible=True
+Early stopping at generation 112, best_cost=228
+Seed 999: cost=228, time=29.36s, generations=112, feasible=True
+Early stopping at generation 116, best_cost=229
+Seed 2026: cost=229, time=29.92s, generations=116, feasible=True
+Early stopping at generation 114, best_cost=229
+Seed 7: cost=229, time=29.95s, generations=114, feasible=True
+
+Summary for config:
+Best GA cost: 228 achieved by seed 42
+Average GA cost: 228.60
+Worst GA cost: 229
+Std GA cost: 0.55
+Average GA time: 28.99s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 110.60
+
+--- Crossover Only: Pop=300 Gen=200 C=0.9 M=0 uniform ---
+Early stopping at generation 101, best_cost=230
+Seed 42: cost=230, time=16.96s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=229
+Seed 123: cost=229, time=17.29s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=229
+Seed 999: cost=229, time=15.66s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=230
+Seed 2026: cost=230, time=17.68s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=230
+Seed 7: cost=230, time=16.88s, generations=101, feasible=True
+
+Summary for config:
+Best GA cost: 229 achieved by seed 123
+Average GA cost: 229.60
+Worst GA cost: 230
+Std GA cost: 0.55
+Average GA time: 16.89s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 101.00
+
+--- Mutation Only: Pop=300 Gen=200 C=0 M=0.015 uniform ---
+Early stopping at generation 101, best_cost=228
+Seed 42: cost=228, time=21.44s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=229
+Seed 123: cost=229, time=21.60s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=228
+Seed 999: cost=228, time=21.43s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=229
+Seed 2026: cost=229, time=23.21s, generations=101, feasible=True
+Early stopping at generation 171, best_cost=226
+Seed 7: cost=226, time=35.94s, generations=171, feasible=True
+
+Summary for config:
+Best GA cost: 226 achieved by seed 7
+Average GA cost: 228.00
+Worst GA cost: 229
+Std GA cost: 1.22
+Average GA time: 24.72s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 115.00
+
+========================================
+Running instance: data/scpa1.txt
+Problem size: m=300 elements, n=3000 sets
+Greedy: cost=288, time=0.0954s, feasible=True
+
+--- Required Config: Pop=300 Gen=200 C=0.8 M=0.05 one_point ---
+Early stopping at generation 152, best_cost=259
+Seed 42: cost=259, time=53.51s, generations=152, feasible=True
+Early stopping at generation 153, best_cost=256
+Seed 123: cost=256, time=53.92s, generations=153, feasible=True
+Early stopping at generation 138, best_cost=259
+Seed 999: cost=259, time=49.72s, generations=138, feasible=True
+Early stopping at generation 140, best_cost=259
+Seed 2026: cost=259, time=49.94s, generations=140, feasible=True
+Early stopping at generation 131, best_cost=259
+Seed 7: cost=259, time=51.55s, generations=131, feasible=True
+
+Summary for config:
+Best GA cost: 256 achieved by seed 123
+Average GA cost: 258.40
+Worst GA cost: 259
+Std GA cost: 1.34
+Average GA time: 51.73s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 142.80
+
+--- Config: Pop=300 Gen=500 C=0.91 M=0.015 uniform ---
+Early stopping at generation 101, best_cost=257
+Seed 42: cost=257, time=57.67s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=257
+Seed 123: cost=257, time=75.62s, generations=101, feasible=True
+Early stopping at generation 103, best_cost=257
+Seed 999: cost=257, time=56.83s, generations=103, feasible=True
+Early stopping at generation 101, best_cost=257
+Seed 2026: cost=257, time=52.96s, generations=101, feasible=True
+Early stopping at generation 104, best_cost=256
+Seed 7: cost=256, time=55.18s, generations=104, feasible=True
+
+Summary for config:
+Best GA cost: 256 achieved by seed 7
+Average GA cost: 256.80
+Worst GA cost: 257
+Std GA cost: 0.45
+Average GA time: 59.65s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 102.00
+
+--- Crossover Only: Pop=300 Gen=200 C=0.9 M=0 uniform ---
+Early stopping at generation 101, best_cost=258
+Seed 42: cost=258, time=27.15s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=259
+Seed 123: cost=259, time=27.02s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=256
+Seed 999: cost=256, time=29.83s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=257
+Seed 2026: cost=257, time=26.91s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=258
+Seed 7: cost=258, time=28.93s, generations=101, feasible=True
+
+Summary for config:
+Best GA cost: 256 achieved by seed 999
+Average GA cost: 257.60
+Worst GA cost: 259
+Std GA cost: 1.14
+Average GA time: 27.97s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 101.00
+
+--- Mutation Only: Pop=300 Gen=200 C=0 M=0.015 uniform ---
+Early stopping at generation 101, best_cost=257
+Seed 42: cost=257, time=41.89s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=257
+Seed 123: cost=257, time=43.79s, generations=101, feasible=True
+Early stopping at generation 103, best_cost=256
+Seed 999: cost=256, time=42.68s, generations=103, feasible=True
+Early stopping at generation 109, best_cost=257
+Seed 2026: cost=257, time=43.86s, generations=109, feasible=True
+Early stopping at generation 138, best_cost=256
+Seed 7: cost=256, time=55.96s, generations=138, feasible=True
+
+Summary for config:
+Best GA cost: 256 achieved by seed 999
+Average GA cost: 256.60
+Worst GA cost: 257
+Std GA cost: 0.55
+Average GA time: 45.64s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 110.40
+
+========================================
+Running instance: data/scpa2.txt
+Problem size: m=300 elements, n=3000 sets
+Greedy: cost=284, time=0.0909s, feasible=True
+
+--- Required Config: Pop=300 Gen=200 C=0.8 M=0.05 one_point ---
+Seed 42: cost=259, time=71.98s, generations=200, feasible=True
+Early stopping at generation 104, best_cost=267
+Seed 123: cost=264, time=39.45s, generations=104, feasible=True
+Seed 999: cost=258, time=72.57s, generations=200, feasible=True
+Seed 2026: cost=264, time=72.98s, generations=200, feasible=True
+Seed 7: cost=262, time=70.88s, generations=200, feasible=True
+
+Summary for config:
+Best GA cost: 258 achieved by seed 999
+Average GA cost: 261.40
+Worst GA cost: 264
+Std GA cost: 2.79
+Average GA time: 65.57s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 180.80
+
+--- Config: Pop=300 Gen=500 C=0.91 M=0.015 uniform ---
+Early stopping at generation 115, best_cost=258
+Seed 42: cost=258, time=67.96s, generations=115, feasible=True
+Early stopping at generation 123, best_cost=258
+Seed 123: cost=258, time=73.10s, generations=123, feasible=True
+Early stopping at generation 111, best_cost=258
+Seed 999: cost=258, time=64.50s, generations=111, feasible=True
+Early stopping at generation 121, best_cost=258
+Seed 2026: cost=258, time=70.46s, generations=121, feasible=True
+Early stopping at generation 108, best_cost=258
+Seed 7: cost=258, time=63.61s, generations=108, feasible=True
+
+Summary for config:
+Best GA cost: 258 achieved by seed 42
+Average GA cost: 258.00
+Worst GA cost: 258
+Std GA cost: 0.00
+Average GA time: 67.93s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 115.60
+
+--- Crossover Only: Pop=300 Gen=200 C=0.9 M=0 uniform ---
+Early stopping at generation 101, best_cost=262
+Seed 42: cost=262, time=29.89s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=260
+Seed 123: cost=260, time=30.43s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=261
+Seed 999: cost=261, time=28.18s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=260
+Seed 2026: cost=260, time=28.11s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=262
+Seed 7: cost=262, time=27.36s, generations=101, feasible=True
+
+Summary for config:
+Best GA cost: 260 achieved by seed 123
+Average GA cost: 261.00
+Worst GA cost: 262
+Std GA cost: 1.00
+Average GA time: 28.79s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 101.00
+
+--- Mutation Only: Pop=300 Gen=200 C=0 M=0.015 uniform ---
+Early stopping at generation 103, best_cost=257
+Seed 42: cost=257, time=44.32s, generations=103, feasible=True
+Early stopping at generation 125, best_cost=258
+Seed 123: cost=258, time=50.86s, generations=125, feasible=True
+Early stopping at generation 130, best_cost=258
+Seed 999: cost=258, time=53.16s, generations=130, feasible=True
+Early stopping at generation 118, best_cost=258
+Seed 2026: cost=258, time=49.39s, generations=118, feasible=True
+Early stopping at generation 117, best_cost=258
+Seed 7: cost=258, time=48.59s, generations=117, feasible=True
+
+Summary for config:
+Best GA cost: 257 achieved by seed 42
+Average GA cost: 257.80
+Worst GA cost: 258
+Std GA cost: 0.45
+Average GA time: 49.26s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 118.60
+
+========================================
+Running instance: data/scpa3.txt
+Problem size: m=300 elements, n=3000 sets
+Greedy: cost=270, time=0.0937s, feasible=True
+
+--- Required Config: Pop=300 Gen=200 C=0.8 M=0.05 one_point ---
+Early stopping at generation 174, best_cost=243
+Seed 42: cost=243, time=61.64s, generations=174, feasible=True
+Early stopping at generation 101, best_cost=245
+Seed 123: cost=243, time=36.77s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=245
+Seed 999: cost=243, time=36.99s, generations=101, feasible=True
+Early stopping at generation 134, best_cost=244
+Seed 2026: cost=242, time=51.67s, generations=134, feasible=True
+Early stopping at generation 101, best_cost=245
+Seed 7: cost=243, time=41.56s, generations=101, feasible=True
+
+Summary for config:
+Best GA cost: 242 achieved by seed 2026
+Average GA cost: 242.80
+Worst GA cost: 243
+Std GA cost: 0.45
+Average GA time: 45.72s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 122.20
+
+--- Config: Pop=300 Gen=500 C=0.91 M=0.015 uniform ---
+Early stopping at generation 212, best_cost=237
+Seed 42: cost=237, time=129.63s, generations=212, feasible=True
+Early stopping at generation 208, best_cost=237
+Seed 123: cost=237, time=130.37s, generations=208, feasible=True
+Early stopping at generation 170, best_cost=236
+Seed 999: cost=236, time=111.16s, generations=170, feasible=True
+Early stopping at generation 198, best_cost=236
+Seed 2026: cost=236, time=120.59s, generations=198, feasible=True
+Early stopping at generation 170, best_cost=237
+Seed 7: cost=237, time=108.08s, generations=170, feasible=True
+
+Summary for config:
+Best GA cost: 236 achieved by seed 999
+Average GA cost: 236.60
+Worst GA cost: 237
+Std GA cost: 0.55
+Average GA time: 119.96s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 191.60
+
+--- Crossover Only: Pop=300 Gen=200 C=0.9 M=0 uniform ---
+Early stopping at generation 101, best_cost=240
+Seed 42: cost=240, time=31.25s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=240
+Seed 123: cost=240, time=32.19s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=241
+Seed 999: cost=241, time=32.41s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=242
+Seed 2026: cost=242, time=31.23s, generations=101, feasible=True
+Early stopping at generation 101, best_cost=241
+Seed 7: cost=241, time=28.93s, generations=101, feasible=True
+
+Summary for config:
+Best GA cost: 240 achieved by seed 42
+Average GA cost: 240.80
+Worst GA cost: 242
+Std GA cost: 0.84
+Average GA time: 31.20s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 101.00
+
+--- Mutation Only: Pop=300 Gen=200 C=0 M=0.015 uniform ---
+Early stopping at generation 196, best_cost=238
+Seed 42: cost=238, time=87.47s, generations=196, feasible=True
+Early stopping at generation 160, best_cost=236
+Seed 123: cost=236, time=71.98s, generations=160, feasible=True
+Early stopping at generation 195, best_cost=236
+Seed 999: cost=236, time=88.96s, generations=195, feasible=True
+Early stopping at generation 193, best_cost=234
+Seed 2026: cost=234, time=84.68s, generations=193, feasible=True
+Seed 7: cost=236, time=91.62s, generations=200, feasible=True
+
+Summary for config:
+Best GA cost: 234 achieved by seed 2026
+Average GA cost: 236.00
+Worst GA cost: 238
+Std GA cost: 1.41
+Average GA time: 84.94s
+All GA runs feasible: True
+Better method on average: GA
+Average generations until stop: 188.80
+
+========================================
+FINAL SUMMARY
+instance | config | greedy | best_ga | avg_ga | std | avg_time | best_seed | better
+data/scp41.txt | Required Config: Pop=300 Gen=200 C=0.8 M=0.05 one_point | greedy=463 | best_ga=432 | avg_ga=432.80 | gens=106.00 | std=0.45 | time=28.59s | seed=42 | GA
+data/scp41.txt | Config: Pop=300 Gen=500 C=0.91 M=0.015 uniform | greedy=463 | best_ga=433 | avg_ga=433.00 | gens=101.00 | std=0.00 | time=17.74s | seed=42 | GA
+data/scp41.txt | Crossover Only: Pop=300 Gen=200 C=0.9 M=0 uniform | greedy=463 | best_ga=433 | avg_ga=433.00 | gens=101.00 | std=0.00 | time=9.33s | seed=42 | GA
+data/scp41.txt | Mutation Only: Pop=300 Gen=200 C=0 M=0.015 uniform | greedy=463 | best_ga=433 | avg_ga=433.00 | gens=101.00 | std=0.00 | time=17.68s | seed=42 | GA
+data/scp42.txt | Required Config: Pop=300 Gen=200 C=0.8 M=0.05 one_point | greedy=582 | best_ga=512 | avg_ga=513.20 | gens=151.40 | std=2.68 | time=38.39s | seed=123 | GA
+data/scp42.txt | Config: Pop=300 Gen=500 C=0.91 M=0.015 uniform | greedy=582 | best_ga=512 | avg_ga=513.20 | gens=103.40 | std=2.68 | time=16.66s | seed=123 | GA
+data/scp42.txt | Crossover Only: Pop=300 Gen=200 C=0.9 M=0 uniform | greedy=582 | best_ga=513 | avg_ga=518.80 | gens=101.00 | std=4.92 | time=9.35s | seed=123 | GA
+data/scp42.txt | Mutation Only: Pop=300 Gen=200 C=0 M=0.015 uniform | greedy=582 | best_ga=512 | avg_ga=513.80 | gens=130.20 | std=4.02 | time=21.32s | seed=123 | GA
+data/scp43.txt | Required Config: Pop=300 Gen=200 C=0.8 M=0.05 one_point | greedy=598 | best_ga=519 | avg_ga=520.60 | gens=168.40 | std=1.52 | time=40.75s | seed=999 | GA
+data/scp43.txt | Config: Pop=300 Gen=500 C=0.91 M=0.015 uniform | greedy=598 | best_ga=516 | avg_ga=517.20 | gens=119.80 | std=2.68 | time=19.00s | seed=42 | GA
+data/scp43.txt | Crossover Only: Pop=300 Gen=200 C=0.9 M=0 uniform | greedy=598 | best_ga=520 | avg_ga=524.00 | gens=101.00 | std=3.74 | time=9.20s | seed=42 | GA
+data/scp43.txt | Mutation Only: Pop=300 Gen=200 C=0 M=0.015 uniform | greedy=598 | best_ga=516 | avg_ga=516.80 | gens=136.80 | std=1.79 | time=21.11s | seed=42 | GA
+data/scp44.txt | Required Config: Pop=300 Gen=200 C=0.8 M=0.05 one_point | greedy=548 | best_ga=495 | avg_ga=495.00 | gens=110.20 | std=0.00 | time=29.74s | seed=42 | GA
+data/scp44.txt | Config: Pop=300 Gen=500 C=0.91 M=0.015 uniform | greedy=548 | best_ga=494 | avg_ga=494.00 | gens=103.40 | std=0.00 | time=16.89s | seed=42 | GA
+data/scp44.txt | Crossover Only: Pop=300 Gen=200 C=0.9 M=0 uniform | greedy=548 | best_ga=495 | avg_ga=499.00 | gens=101.00 | std=2.24 | time=9.16s | seed=999 | GA
+data/scp44.txt | Mutation Only: Pop=300 Gen=200 C=0 M=0.015 uniform | greedy=548 | best_ga=494 | avg_ga=494.40 | gens=109.60 | std=0.55 | time=15.35s | seed=42 | GA
+data/scp51.txt | Required Config: Pop=300 Gen=200 C=0.8 M=0.05 one_point | greedy=289 | best_ga=262 | avg_ga=262.80 | gens=144.00 | std=0.45 | time=38.58s | seed=999 | GA
+data/scp51.txt | Config: Pop=300 Gen=500 C=0.91 M=0.015 uniform | greedy=289 | best_ga=262 | avg_ga=262.00 | gens=104.20 | std=0.00 | time=29.45s | seed=42 | GA
+data/scp51.txt | Crossover Only: Pop=300 Gen=200 C=0.9 M=0 uniform | greedy=289 | best_ga=269 | avg_ga=269.00 | gens=101.00 | std=0.00 | time=15.20s | seed=42 | GA
+data/scp51.txt | Mutation Only: Pop=300 Gen=200 C=0 M=0.015 uniform | greedy=289 | best_ga=262 | avg_ga=262.00 | gens=105.60 | std=0.00 | time=22.77s | seed=42 | GA
+data/scp52.txt | Required Config: Pop=300 Gen=200 C=0.8 M=0.05 one_point | greedy=348 | best_ga=308 | avg_ga=317.20 | gens=172.40 | std=5.89 | time=46.29s | seed=2026 | GA
+data/scp52.txt | Config: Pop=300 Gen=500 C=0.91 M=0.015 uniform | greedy=348 | best_ga=305 | avg_ga=308.60 | gens=143.40 | std=4.39 | time=39.45s | seed=999 | GA
+data/scp52.txt | Crossover Only: Pop=300 Gen=200 C=0.9 M=0 uniform | greedy=348 | best_ga=313 | avg_ga=316.60 | gens=101.00 | std=3.29 | time=15.92s | seed=7 | GA
+data/scp52.txt | Mutation Only: Pop=300 Gen=200 C=0 M=0.015 uniform | greedy=348 | best_ga=307 | avg_ga=312.20 | gens=135.80 | std=6.30 | time=29.48s | seed=42 | GA
+data/scp53.txt | Required Config: Pop=300 Gen=200 C=0.8 M=0.05 one_point | greedy=246 | best_ga=226 | avg_ga=228.40 | gens=135.00 | std=1.52 | time=35.53s | seed=42 | GA
+data/scp53.txt | Config: Pop=300 Gen=500 C=0.91 M=0.015 uniform | greedy=246 | best_ga=228 | avg_ga=228.60 | gens=110.60 | std=0.55 | time=28.99s | seed=42 | GA
+data/scp53.txt | Crossover Only: Pop=300 Gen=200 C=0.9 M=0 uniform | greedy=246 | best_ga=229 | avg_ga=229.60 | gens=101.00 | std=0.55 | time=16.89s | seed=123 | GA
+data/scp53.txt | Mutation Only: Pop=300 Gen=200 C=0 M=0.015 uniform | greedy=246 | best_ga=226 | avg_ga=228.00 | gens=115.00 | std=1.22 | time=24.72s | seed=7 | GA
+data/scpa1.txt | Required Config: Pop=300 Gen=200 C=0.8 M=0.05 one_point | greedy=288 | best_ga=256 | avg_ga=258.40 | gens=142.80 | std=1.34 | time=51.73s | seed=123 | GA
+data/scpa1.txt | Config: Pop=300 Gen=500 C=0.91 M=0.015 uniform | greedy=288 | best_ga=256 | avg_ga=256.80 | gens=102.00 | std=0.45 | time=59.65s | seed=7 | GA
+data/scpa1.txt | Crossover Only: Pop=300 Gen=200 C=0.9 M=0 uniform | greedy=288 | best_ga=256 | avg_ga=257.60 | gens=101.00 | std=1.14 | time=27.97s | seed=999 | GA
+data/scpa1.txt | Mutation Only: Pop=300 Gen=200 C=0 M=0.015 uniform | greedy=288 | best_ga=256 | avg_ga=256.60 | gens=110.40 | std=0.55 | time=45.64s | seed=999 | GA
+data/scpa2.txt | Required Config: Pop=300 Gen=200 C=0.8 M=0.05 one_point | greedy=284 | best_ga=258 | avg_ga=261.40 | gens=180.80 | std=2.79 | time=65.57s | seed=999 | GA
+data/scpa2.txt | Config: Pop=300 Gen=500 C=0.91 M=0.015 uniform | greedy=284 | best_ga=258 | avg_ga=258.00 | gens=115.60 | std=0.00 | time=67.93s | seed=42 | GA
+data/scpa2.txt | Crossover Only: Pop=300 Gen=200 C=0.9 M=0 uniform | greedy=284 | best_ga=260 | avg_ga=261.00 | gens=101.00 | std=1.00 | time=28.79s | seed=123 | GA
+data/scpa2.txt | Mutation Only: Pop=300 Gen=200 C=0 M=0.015 uniform | greedy=284 | best_ga=257 | avg_ga=257.80 | gens=118.60 | std=0.45 | time=49.26s | seed=42 | GA
+data/scpa3.txt | Required Config: Pop=300 Gen=200 C=0.8 M=0.05 one_point | greedy=270 | best_ga=242 | avg_ga=242.80 | gens=122.20 | std=0.45 | time=45.72s | seed=2026 | GA
+data/scpa3.txt | Config: Pop=300 Gen=500 C=0.91 M=0.015 uniform | greedy=270 | best_ga=236 | avg_ga=236.60 | gens=191.60 | std=0.55 | time=119.96s | seed=999 | GA
+data/scpa3.txt | Crossover Only: Pop=300 Gen=200 C=0.9 M=0 uniform | greedy=270 | best_ga=240 | avg_ga=240.80 | gens=101.00 | std=0.84 | time=31.20s | seed=42 | GA
+data/scpa3.txt | Mutation Only: Pop=300 Gen=200 C=0 M=0.015 uniform | greedy=270 | best_ga=234 | avg_ga=236.00 | gens=188.80 | std=1.41 | time=84.94s | seed=2026 | GA
+
+Saved final summary to results/final_summary.csv
+
+Process finished with exit code 0
