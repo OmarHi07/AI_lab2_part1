@@ -12,6 +12,7 @@ from repair import repair_solution
 from selection import tournament_selection
 from fitness import compute_cost
 from stats import average, std_dev, active_genes_std, sampled_hamming_distance, unique_chromosome_ratio
+from distance import sampled_average_distance
 from baseline import greedy_set_cover
 
 def greedy_variant(problem, greedy_solution, remove_rate=0.20, add_rate=0.01):
@@ -217,7 +218,19 @@ def run_ga(problem, population_size=100, generations=100,
             "avg_cost": avg_cost,
             "worst_cost": max(costs),
             "selection_pressure": selection_pressure,
-            "diversity_hamming": sampled_hamming_distance(population,sample_pairs=30,sample_seed=generation),
+            "diversity_hamming": sampled_hamming_distance(population, sample_pairs=30, sample_seed=generation),
+            "diversity_hamming_normalized": sampled_average_distance(
+                population,
+                distance_name="hamming",
+                sample_pairs=30,
+                sample_seed=generation
+            ),
+            "diversity_jaccard": sampled_average_distance(
+                population,
+                distance_name="jaccard",
+                sample_pairs=30,
+                sample_seed=generation
+            ),
             "diversity_active_genes": active_genes_std(population),
             "diversity_unique_ratio": unique_chromosome_ratio(population),
             "elapsed_time": time.time() - start_time,
