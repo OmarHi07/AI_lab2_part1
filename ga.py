@@ -14,6 +14,7 @@ from fitness import compute_cost
 from stats import average, std_dev, active_genes_std, sampled_hamming_distance, unique_chromosome_ratio
 from distance import sampled_average_distance
 from baseline import greedy_set_cover
+from niching import fitness_sharing_selection_scores
 
 def greedy_variant(problem, greedy_solution, remove_rate=0.20, add_rate=0.01):
     """
@@ -170,7 +171,12 @@ def run_ga(problem, population_size=100, generations=100,
            crossover_rate=0.8, mutation_rate=0.05,
            elite_size=1, crossover_type="one_point", seed=None,
            show_plots=False, verbose=False, patience=80,
-           min_generations=100):
+           min_generations=100,
+           niching_method="none",
+           niche_distance="jaccard",
+           sigma_share=0.35,
+           sharing_alpha=1.0,
+           sharing_sample_size=30):
     """Run the Genetic Algorithm on a Set Cover instance."""
 
     if seed is not None:
@@ -194,7 +200,34 @@ def run_ga(problem, population_size=100, generations=100,
     for generation in range(generations):
         fitnesses, costs = evaluate_population(population, problem)
 
+        # Real fitness is still used for reporting true solution quality.
+        # Selection fitness may be changed by niching / fitness sharing.
+        selection_fitnesses = fitnesses[:]
+
+        sharing_avg_niche_count = 0.0
+        sharing_max_niche_count = 0.0
+        sharing_min_niche_count = 0.0
+
+        if niching_method == "fitness_sharing":
+            selection_fitnesses, sharing_info = fitness_sharing_selection_scores(
+                population=population,
+                costs=costs,
+                distance_name=niche_distance,
+                sigma_share=sigma_share,
+                alpha=sharing_alpha,
+                sample_size=sharing_sample_size,
+                sample_seed=generation,
+            )
+
+            sharing_avg_niche_count = sharing_info["avg_niche_count"]
+            sharing_max_niche_count = sharing_info["max_niche_count"]
+            sharing_min_niche_count = sharing_info["min_niche_count"]
+
+        elif niching_method != "none":
+            raise ValueError("Unknown niching method: " + str(niching_method))
+
         best_individual, best_fit = get_best_individual(population, fitnesses)
+
         best_cost = -best_fit
         avg_cost = average(costs)
 
@@ -233,6 +266,15 @@ def run_ga(problem, population_size=100, generations=100,
             ),
             "diversity_active_genes": active_genes_std(population),
             "diversity_unique_ratio": unique_chromosome_ratio(population),
+
+            "niching_method": niching_method,
+            "niche_distance": niche_distance,
+            "sigma_share": sigma_share if niching_method == "fitness_sharing" else 0.0,
+            "sharing_alpha": sharing_alpha if niching_method == "fitness_sharing" else 0.0,
+            "sharing_avg_niche_count": sharing_avg_niche_count,
+            "sharing_max_niche_count": sharing_max_niche_count,
+            "sharing_min_niche_count": sharing_min_niche_count,
+
             "elapsed_time": time.time() - start_time,
         }
         history.append(gen_stats)
@@ -250,13 +292,14 @@ def run_ga(problem, population_size=100, generations=100,
                 print(f"Early stopping at generation {generation + 1}, best_cost={best_cost_so_far}")
                 break
 
-        # Elitism: keep the best chromosomes.
+        # Elitism should preserve the true best objective solutions.
+        # Fitness sharing is used for parent selection, not for deleting the real best.
         sorted_indices = sorted(range(len(population)), key=lambda i: fitnesses[i], reverse=True)
         new_population = [population[i][:] for i in sorted_indices[:elite_size]]
 
         while len(new_population) < population_size:
-            parent1 = tournament_selection(population, fitnesses)
-            parent2 = tournament_selection(population, fitnesses)
+            parent1 = tournament_selection(population, selection_fitnesses)
+            parent2 = tournament_selection(population, selection_fitnesses)
 
             if random.random() < crossover_rate:
                 if crossover_type == "one_point":
