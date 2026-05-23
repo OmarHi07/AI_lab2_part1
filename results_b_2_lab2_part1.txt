@@ -1,0 +1,257 @@
+C:\Users\omar\AppData\Local\Programs\Python\Python313\python.exe C:\Users\omar\Desktop\AI_lab2_part1\main_hw2_niching_compare.py 
+
+====================================================
+Instance: data/scp41.txt
+Problem size: m=200, n=1000
+
+--- Original GA ---
+Running seed 42...
+Early stopping at generation 101, best_cost=433
+seed=42 | cost=433 | feasible=True | time=35.45s | div=0.4955 | unique=0.9900 | species=0 | share_niche=0.0000
+Running seed 123...
+Early stopping at generation 101, best_cost=433
+seed=123 | cost=433 | feasible=True | time=36.12s | div=0.4643 | unique=0.9933 | species=0 | share_niche=0.0000
+
+--- Fitness Sharing sigma=0.20 ---
+Running seed 42...
+Early stopping at generation 101, best_cost=433
+seed=42 | cost=433 | feasible=True | time=107.77s | div=0.5410 | unique=0.9900 | species=0 | share_niche=1.0505
+Running seed 123...
+Early stopping at generation 101, best_cost=433
+seed=123 | cost=433 | feasible=True | time=117.28s | div=0.5082 | unique=0.9900 | species=0 | share_niche=1.0633
+
+--- Fitness Sharing sigma=0.35 ---
+Running seed 42...
+Early stopping at generation 101, best_cost=433
+seed=42 | cost=433 | feasible=True | time=142.00s | div=0.5665 | unique=0.9900 | species=0 | share_niche=1.1025
+Running seed 123...
+Early stopping at generation 164, best_cost=433
+seed=123 | cost=433 | feasible=True | time=177.36s | div=0.5929 | unique=0.9933 | species=0 | share_niche=1.0952
+
+--- Fitness Sharing sigma=0.50 ---
+Running seed 42...
+Early stopping at generation 101, best_cost=433
+seed=42 | cost=433 | feasible=True | time=104.07s | div=0.6495 | unique=0.9933 | species=0 | share_niche=1.2106
+Running seed 123...
+Early stopping at generation 101, best_cost=434
+seed=123 | cost=433 | feasible=True | time=114.86s | div=0.6494 | unique=0.9900 | species=0 | share_niche=1.2419
+
+--- Threshold Speciation threshold=0.05 ---
+Running seed 42...
+Early stopping at generation 101, best_cost=433
+seed=42 | cost=433 | feasible=True | time=327.00s | div=0.7948 | unique=0.9867 | species=295 | share_niche=0.0000
+Running seed 123...
+Early stopping at generation 109, best_cost=433
+seed=123 | cost=433 | feasible=True | time=347.09s | div=0.7535 | unique=0.9867 | species=294 | share_niche=0.0000
+
+--- Threshold Speciation threshold=0.08 ---
+Running seed 42...
+Early stopping at generation 101, best_cost=433
+seed=42 | cost=433 | feasible=True | time=320.41s | div=0.7763 | unique=0.9933 | species=294 | share_niche=0.0000
+Running seed 123...
+Early stopping at generation 149, best_cost=433
+seed=123 | cost=433 | feasible=True | time=473.69s | div=0.7766 | unique=0.9933 | species=292 | share_niche=0.0000
+
+--- Threshold Speciation threshold=0.10 ---
+Running seed 42...
+Early stopping at generation 101, best_cost=433
+seed=42 | cost=433 | feasible=True | time=317.65s | div=0.7974 | unique=0.9900 | species=293 | share_niche=0.0000
+Running seed 123...
+Early stopping at generation 101, best_cost=433
+seed=123 | cost=433 | feasible=True | time=315.08s | div=0.8070 | unique=0.9867 | species=290 | share_niche=0.0000
+
+--- Threshold Speciation threshold=0.15 ---
+Running seed 42...
+Early stopping at generation 101, best_cost=433
+seed=42 | cost=433 | feasible=True | time=301.12s | div=0.7909 | unique=0.9900 | species=278 | share_niche=0.0000
+Running seed 123...
+Early stopping at generation 101, best_cost=433
+seed=123 | cost=433 | feasible=True | time=304.58s | div=0.7789 | unique=0.9900 | species=281 | share_niche=0.0000
+
+====================================================
+Instance: data/scp51.txt
+Problem size: m=200, n=2000
+
+--- Original GA ---
+Running seed 42...
+Early stopping at generation 110, best_cost=268
+seed=42 | cost=263 | feasible=True | time=46.66s | div=0.7292 | unique=0.9900 | species=0 | share_niche=0.0000
+Running seed 123...
+Early stopping at generation 101, best_cost=269
+seed=123 | cost=269 | feasible=True | time=41.24s | div=0.7383 | unique=0.9900 | species=0 | share_niche=0.0000
+
+--- Fitness Sharing sigma=0.20 ---
+Running seed 42...
+Early stopping at generation 101, best_cost=269
+seed=42 | cost=269 | feasible=True | time=164.13s | div=0.7732 | unique=0.9933 | species=0 | share_niche=1.0905
+Running seed 123...
+Early stopping at generation 101, best_cost=269
+seed=123 | cost=269 | feasible=True | time=165.04s | div=0.7658 | unique=0.9900 | species=0 | share_niche=1.0434
+
+--- Fitness Sharing sigma=0.35 ---
+Running seed 42...
+Early stopping at generation 101, best_cost=269
+seed=42 | cost=269 | feasible=True | time=170.60s | div=0.7754 | unique=0.9933 | species=0 | share_niche=1.1033
+Running seed 123...
+Early stopping at generation 101, best_cost=269
+seed=123 | cost=269 | feasible=True | time=167.40s | div=0.8175 | unique=0.9900 | species=0 | share_niche=1.0332
+
+--- Fitness Sharing sigma=0.50 ---
+Running seed 42...
+Early stopping at generation 101, best_cost=269
+seed=42 | cost=269 | feasible=True | time=169.15s | div=0.8177 | unique=0.9933 | species=0 | share_niche=1.1113
+Running seed 123...
+Early stopping at generation 101, best_cost=269
+seed=123 | cost=269 | feasible=True | time=167.44s | div=0.8305 | unique=0.9900 | species=0 | share_niche=1.0404
+
+--- Threshold Speciation threshold=0.05 ---
+Running seed 42...
+seed=42 | cost=263 | feasible=True | time=1216.84s | div=0.8696 | unique=0.9900 | species=297 | share_niche=0.0000
+Running seed 123...
+Early stopping at generation 199, best_cost=265
+seed=123 | cost=265 | feasible=True | time=1215.16s | div=0.8893 | unique=0.9900 | species=296 | share_niche=0.0000
+
+--- Threshold Speciation threshold=0.08 ---
+Running seed 42...
+Early stopping at generation 101, best_cost=269
+seed=42 | cost=269 | feasible=True | time=608.70s | div=0.9070 | unique=0.9933 | species=295 | share_niche=0.0000
+Running seed 123...
+Early stopping at generation 101, best_cost=269
+seed=123 | cost=269 | feasible=True | time=610.74s | div=0.8889 | unique=0.9900 | species=295 | share_niche=0.0000
+
+--- Threshold Speciation threshold=0.10 ---
+Running seed 42...
+Early stopping at generation 101, best_cost=264
+seed=42 | cost=263 | feasible=True | time=609.08s | div=0.8875 | unique=0.9900 | species=296 | share_niche=0.0000
+Running seed 123...
+Early stopping at generation 101, best_cost=269
+seed=123 | cost=269 | feasible=True | time=609.83s | div=0.9009 | unique=0.9933 | species=297 | share_niche=0.0000
+
+--- Threshold Speciation threshold=0.15 ---
+Running seed 42...
+Early stopping at generation 101, best_cost=269
+seed=42 | cost=269 | feasible=True | time=600.84s | div=0.8875 | unique=0.9933 | species=295 | share_niche=0.0000
+Running seed 123...
+Early stopping at generation 154, best_cost=263
+seed=123 | cost=263 | feasible=True | time=913.51s | div=0.8660 | unique=0.9900 | species=293 | share_niche=0.0000
+
+====================================================
+Instance: data/scpa3.txt
+Problem size: m=300, n=3000
+
+--- Original GA ---
+Running seed 42...
+Early stopping at generation 101, best_cost=245
+seed=42 | cost=243 | feasible=True | time=56.92s | div=0.8125 | unique=0.9900 | species=0 | share_niche=0.0000
+Running seed 123...
+Early stopping at generation 101, best_cost=245
+seed=123 | cost=243 | feasible=True | time=56.69s | div=0.7992 | unique=0.9933 | species=0 | share_niche=0.0000
+
+--- Fitness Sharing sigma=0.20 ---
+Running seed 42...
+Early stopping at generation 101, best_cost=245
+seed=42 | cost=243 | feasible=True | time=241.57s | div=0.8331 | unique=0.9933 | species=0 | share_niche=1.0268
+Running seed 123...
+Early stopping at generation 101, best_cost=245
+seed=123 | cost=243 | feasible=True | time=241.46s | div=0.8220 | unique=0.9967 | species=0 | share_niche=1.0829
+
+--- Fitness Sharing sigma=0.35 ---
+Running seed 42...
+Early stopping at generation 101, best_cost=245
+seed=42 | cost=243 | feasible=True | time=243.16s | div=0.8339 | unique=0.9967 | species=0 | share_niche=1.0629
+Running seed 123...
+Early stopping at generation 101, best_cost=245
+seed=123 | cost=243 | feasible=True | time=243.54s | div=0.8460 | unique=1.0000 | species=0 | share_niche=1.1045
+
+--- Fitness Sharing sigma=0.50 ---
+Running seed 42...
+Early stopping at generation 101, best_cost=245
+seed=42 | cost=243 | feasible=True | time=244.52s | div=0.8470 | unique=0.9967 | species=0 | share_niche=1.0396
+Running seed 123...
+Early stopping at generation 101, best_cost=245
+seed=123 | cost=243 | feasible=True | time=244.22s | div=0.8602 | unique=1.0000 | species=0 | share_niche=1.1235
+
+--- Threshold Speciation threshold=0.05 ---
+Running seed 42...
+Early stopping at generation 101, best_cost=245
+seed=42 | cost=243 | feasible=True | time=926.72s | div=0.9202 | unique=0.9933 | species=298 | share_niche=0.0000
+Running seed 123...
+Early stopping at generation 101, best_cost=245
+seed=123 | cost=243 | feasible=True | time=967.05s | div=0.8950 | unique=1.0000 | species=297 | share_niche=0.0000
+
+--- Threshold Speciation threshold=0.08 ---
+Running seed 42...
+Early stopping at generation 101, best_cost=245
+seed=42 | cost=243 | feasible=True | time=924.72s | div=0.9162 | unique=0.9900 | species=296 | share_niche=0.0000
+Running seed 123...
+Early stopping at generation 101, best_cost=245
+seed=123 | cost=243 | feasible=True | time=943.54s | div=0.8973 | unique=0.9967 | species=299 | share_niche=0.0000
+
+--- Threshold Speciation threshold=0.10 ---
+Running seed 42...
+Early stopping at generation 101, best_cost=245
+seed=42 | cost=243 | feasible=True | time=923.40s | div=0.9167 | unique=0.9900 | species=295 | share_niche=0.0000
+Running seed 123...
+Early stopping at generation 101, best_cost=245
+seed=123 | cost=243 | feasible=True | time=925.92s | div=0.8943 | unique=0.9933 | species=297 | share_niche=0.0000
+
+--- Threshold Speciation threshold=0.15 ---
+Running seed 42...
+Early stopping at generation 101, best_cost=245
+seed=42 | cost=243 | feasible=True | time=918.77s | div=0.9165 | unique=0.9900 | species=294 | share_niche=0.0000
+Running seed 123...
+Early stopping at generation 101, best_cost=245
+seed=123 | cost=243 | feasible=True | time=922.14s | div=0.8858 | unique=0.9933 | species=295 | share_niche=0.0000
+
+
+================ FINAL SUMMARY ================
+instance | method | avg_cost | std | best | worst | div | unique | species | species_size | share_niche | time | feasible | seeds
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+scp41  | Original GA                            | avg_cost=433.00 | std=0.00 | best=433 | worst=433 | div=0.4799 | unique=0.9917 | species=0.00 | species_size=0.00 | share_niche=0.0000 | time=35.79s | feasible=True | seeds=2
+scp41  | Fitness Sharing sigma=0.20             | avg_cost=433.00 | std=0.00 | best=433 | worst=433 | div=0.5246 | unique=0.9900 | species=0.00 | species_size=0.00 | share_niche=1.0569 | time=112.53s | feasible=True | seeds=2
+scp41  | Fitness Sharing sigma=0.35             | avg_cost=433.00 | std=0.00 | best=433 | worst=433 | div=0.5797 | unique=0.9917 | species=0.00 | species_size=0.00 | share_niche=1.0988 | time=159.68s | feasible=True | seeds=2
+scp41  | Fitness Sharing sigma=0.50             | avg_cost=433.00 | std=0.00 | best=433 | worst=433 | div=0.6495 | unique=0.9917 | species=0.00 | species_size=0.00 | share_niche=1.2263 | time=109.46s | feasible=True | seeds=2
+scp41  | Threshold Speciation threshold=0.05    | avg_cost=433.00 | std=0.00 | best=433 | worst=433 | div=0.7741 | unique=0.9867 | species=294.50 | species_size=1.02 | share_niche=0.0000 | time=337.04s | feasible=True | seeds=2
+scp41  | Threshold Speciation threshold=0.08    | avg_cost=433.00 | std=0.00 | best=433 | worst=433 | div=0.7764 | unique=0.9933 | species=293.00 | species_size=1.02 | share_niche=0.0000 | time=397.05s | feasible=True | seeds=2
+scp41  | Threshold Speciation threshold=0.10    | avg_cost=433.00 | std=0.00 | best=433 | worst=433 | div=0.8022 | unique=0.9883 | species=291.50 | species_size=1.03 | share_niche=0.0000 | time=316.36s | feasible=True | seeds=2
+scp41  | Threshold Speciation threshold=0.15    | avg_cost=433.00 | std=0.00 | best=433 | worst=433 | div=0.7849 | unique=0.9900 | species=279.50 | species_size=1.07 | share_niche=0.0000 | time=302.85s | feasible=True | seeds=2
+scp51  | Original GA                            | avg_cost=266.00 | std=4.24 | best=263 | worst=269 | div=0.7337 | unique=0.9900 | species=0.00 | species_size=0.00 | share_niche=0.0000 | time=43.95s | feasible=True | seeds=2
+scp51  | Fitness Sharing sigma=0.20             | avg_cost=269.00 | std=0.00 | best=269 | worst=269 | div=0.7695 | unique=0.9917 | species=0.00 | species_size=0.00 | share_niche=1.0670 | time=164.58s | feasible=True | seeds=2
+scp51  | Fitness Sharing sigma=0.35             | avg_cost=269.00 | std=0.00 | best=269 | worst=269 | div=0.7965 | unique=0.9917 | species=0.00 | species_size=0.00 | share_niche=1.0683 | time=169.00s | feasible=True | seeds=2
+scp51  | Fitness Sharing sigma=0.50             | avg_cost=269.00 | std=0.00 | best=269 | worst=269 | div=0.8241 | unique=0.9917 | species=0.00 | species_size=0.00 | share_niche=1.0758 | time=168.29s | feasible=True | seeds=2
+scp51  | Threshold Speciation threshold=0.05    | avg_cost=264.00 | std=1.41 | best=263 | worst=265 | div=0.8795 | unique=0.9900 | species=296.50 | species_size=1.01 | share_niche=0.0000 | time=1216.00s | feasible=True | seeds=2
+scp51  | Threshold Speciation threshold=0.08    | avg_cost=269.00 | std=0.00 | best=269 | worst=269 | div=0.8980 | unique=0.9917 | species=295.00 | species_size=1.02 | share_niche=0.0000 | time=609.72s | feasible=True | seeds=2
+scp51  | Threshold Speciation threshold=0.10    | avg_cost=266.00 | std=4.24 | best=263 | worst=269 | div=0.8942 | unique=0.9917 | species=296.50 | species_size=1.01 | share_niche=0.0000 | time=609.46s | feasible=True | seeds=2
+scp51  | Threshold Speciation threshold=0.15    | avg_cost=266.00 | std=4.24 | best=263 | worst=269 | div=0.8768 | unique=0.9917 | species=294.00 | species_size=1.02 | share_niche=0.0000 | time=757.17s | feasible=True | seeds=2
+scpa3  | Original GA                            | avg_cost=243.00 | std=0.00 | best=243 | worst=243 | div=0.8059 | unique=0.9917 | species=0.00 | species_size=0.00 | share_niche=0.0000 | time=56.80s | feasible=True | seeds=2
+scpa3  | Fitness Sharing sigma=0.20             | avg_cost=243.00 | std=0.00 | best=243 | worst=243 | div=0.8275 | unique=0.9950 | species=0.00 | species_size=0.00 | share_niche=1.0548 | time=241.51s | feasible=True | seeds=2
+scpa3  | Fitness Sharing sigma=0.35             | avg_cost=243.00 | std=0.00 | best=243 | worst=243 | div=0.8400 | unique=0.9983 | species=0.00 | species_size=0.00 | share_niche=1.0837 | time=243.35s | feasible=True | seeds=2
+scpa3  | Fitness Sharing sigma=0.50             | avg_cost=243.00 | std=0.00 | best=243 | worst=243 | div=0.8536 | unique=0.9983 | species=0.00 | species_size=0.00 | share_niche=1.0816 | time=244.37s | feasible=True | seeds=2
+scpa3  | Threshold Speciation threshold=0.05    | avg_cost=243.00 | std=0.00 | best=243 | worst=243 | div=0.9076 | unique=0.9967 | species=297.50 | species_size=1.01 | share_niche=0.0000 | time=946.88s | feasible=True | seeds=2
+scpa3  | Threshold Speciation threshold=0.08    | avg_cost=243.00 | std=0.00 | best=243 | worst=243 | div=0.9067 | unique=0.9933 | species=297.50 | species_size=1.01 | share_niche=0.0000 | time=934.13s | feasible=True | seeds=2
+scpa3  | Threshold Speciation threshold=0.10    | avg_cost=243.00 | std=0.00 | best=243 | worst=243 | div=0.9055 | unique=0.9917 | species=296.00 | species_size=1.01 | share_niche=0.0000 | time=924.66s | feasible=True | seeds=2
+scpa3  | Threshold Speciation threshold=0.15    | avg_cost=243.00 | std=0.00 | best=243 | worst=243 | div=0.9011 | unique=0.9917 | species=294.50 | species_size=1.02 | share_niche=0.0000 | time=920.46s | feasible=True | seeds=2
+
+
+================ BEST METHOD PER INSTANCE ================
+
+Instance: scp41
+Best average cost: Original GA | avg_cost = 433 | diversity = 0.4799 | time = 35.79 s
+Highest diversity: Threshold Speciation threshold=0.10 | diversity = 0.8022 | avg_cost = 433 | time = 316.36 s
+Fastest method: Original GA | time = 35.79 s | avg_cost = 433 | diversity = 0.4799
+
+Instance: scp51
+Best average cost: Threshold Speciation threshold=0.05 | avg_cost = 264 | diversity = 0.8795 | time = 1216.0 s
+Highest diversity: Threshold Speciation threshold=0.08 | diversity = 0.898 | avg_cost = 269 | time = 609.72 s
+Fastest method: Original GA | time = 43.95 s | avg_cost = 266 | diversity = 0.7337
+
+Instance: scpa3
+Best average cost: Original GA | avg_cost = 243 | diversity = 0.8059 | time = 56.8 s
+Highest diversity: Threshold Speciation threshold=0.05 | diversity = 0.9076 | avg_cost = 243 | time = 946.88 s
+Fastest method: Original GA | time = 56.8 s | avg_cost = 243 | diversity = 0.8059
+
+Saved detailed results to: results\niching_sensitivity_detailed.csv
+Saved summary results to: results\niching_sensitivity_summary.csv
+Total runtime: 20042.37 seconds
+
+Process finished with exit code 0

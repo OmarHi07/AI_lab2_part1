@@ -22,7 +22,7 @@ INSTANCES = [
 
 
 
-SEEDS = [42, 123]
+SEEDS = [42]
 
 
 BASE_GA_PARAMS = {
@@ -51,57 +51,56 @@ EXPERIMENT_CONFIGS = [
     # Fitness Sharing / Niching sensitivity to sigma_share
     {
         "method_group": "Fitness Sharing",
-        "variant": "Fitness Sharing sigma=0.20",
-        "niching_method": "fitness_sharing",
-        "sigma_share": 0.20,
-        "speciation_threshold": 0.0,
-    },
-    {
-        "method_group": "Fitness Sharing",
-        "variant": "Fitness Sharing sigma=0.35",
-        "niching_method": "fitness_sharing",
-        "sigma_share": 0.35,
-        "speciation_threshold": 0.0,
-    },
-    {
-        "method_group": "Fitness Sharing",
         "variant": "Fitness Sharing sigma=0.50",
         "niching_method": "fitness_sharing",
         "sigma_share": 0.50,
+        "speciation_threshold": 0.0,
+    },
+    {
+        "method_group": "Fitness Sharing",
+        "variant": "Fitness Sharing sigma=0.70",
+        "niching_method": "fitness_sharing",
+        "sigma_share": 0.70,
+        "speciation_threshold": 0.0,
+    },
+    {
+        "method_group": "Fitness Sharing",
+        "variant": "Fitness Sharing sigma=0.90",
+        "niching_method": "fitness_sharing",
+        "sigma_share": 0.90,
         "speciation_threshold": 0.0,
     },
 
     # Threshold Speciation sensitivity to threshold
     {
         "method_group": "Threshold Speciation",
-        "variant": "Threshold Speciation threshold=0.05",
+        "variant": "Threshold Speciation threshold=0.30",
         "niching_method": "threshold_speciation",
         "sigma_share": 0.0,
-        "speciation_threshold": 0.05,
+        "speciation_threshold": 0.30,
     },
     {
         "method_group": "Threshold Speciation",
-        "variant": "Threshold Speciation threshold=0.08",
+        "variant": "Threshold Speciation threshold=0.50",
         "niching_method": "threshold_speciation",
         "sigma_share": 0.0,
-        "speciation_threshold": 0.08,
+        "speciation_threshold": 0.50,
     },
     {
         "method_group": "Threshold Speciation",
-        "variant": "Threshold Speciation threshold=0.10",
+        "variant": "Threshold Speciation threshold=0.70",
         "niching_method": "threshold_speciation",
         "sigma_share": 0.0,
-        "speciation_threshold": 0.10,
+        "speciation_threshold": 0.70,
     },
     {
         "method_group": "Threshold Speciation",
-        "variant": "Threshold Speciation threshold=0.15",
+        "variant": "Threshold Speciation threshold=0.85",
         "niching_method": "threshold_speciation",
         "sigma_share": 0.0,
-        "speciation_threshold": 0.15,
+        "speciation_threshold": 0.85,
     },
 ]
-
 
 def short_instance_name(path):
     return os.path.basename(path).replace(".txt", "")
@@ -372,8 +371,8 @@ def main():
 
     summary_rows = make_summary(all_rows)
 
-    detailed_path = os.path.join(RESULTS_DIR, "niching_sensitivity_detailed.csv")
-    summary_path = os.path.join(RESULTS_DIR, "niching_sensitivity_summary.csv")
+    detailed_path = os.path.join(RESULTS_DIR, "niching_large_thresholds_detailed.csv")
+    summary_path = os.path.join(RESULTS_DIR, "niching_large_thresholds_summary.csv")
 
     write_csv(detailed_path, all_rows)
     write_csv(summary_path, summary_rows)
