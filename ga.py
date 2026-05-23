@@ -14,7 +14,12 @@ from fitness import compute_cost
 from stats import average, std_dev, active_genes_std, sampled_hamming_distance, unique_chromosome_ratio
 from distance import sampled_average_distance
 from baseline import greedy_set_cover
-from niching import fitness_sharing_selection_scores
+from niching import (
+    fitness_sharing_selection_scores,
+    threshold_speciation,
+    choose_species_for_reproduction,
+    tournament_selection_from_indices,
+)
 
 def greedy_variant(problem, greedy_solution, remove_rate=0.20, add_rate=0.01):
     """
@@ -176,7 +181,8 @@ def run_ga(problem, population_size=100, generations=100,
            niche_distance="jaccard",
            sigma_share=0.35,
            sharing_alpha=1.0,
-           sharing_sample_size=30):
+           sharing_sample_size=30,
+           speciation_threshold=0.35):
     """Run the Genetic Algorithm on a Set Cover instance."""
 
     if seed is not None:
@@ -204,6 +210,12 @@ def run_ga(problem, population_size=100, generations=100,
         # Selection fitness may be changed by niching / fitness sharing.
         selection_fitnesses = fitnesses[:]
 
+        species_members = None
+        species_count = 0
+        avg_species_size = 0.0
+        max_species_size = 0
+        min_species_size = 0
+
         sharing_avg_niche_count = 0.0
         sharing_max_niche_count = 0.0
         sharing_min_niche_count = 0.0
@@ -222,6 +234,18 @@ def run_ga(problem, population_size=100, generations=100,
             sharing_avg_niche_count = sharing_info["avg_niche_count"]
             sharing_max_niche_count = sharing_info["max_niche_count"]
             sharing_min_niche_count = sharing_info["min_niche_count"]
+
+        elif niching_method == "threshold_speciation":
+            _, species_members, species_info = threshold_speciation(
+                population=population,
+                distance_name=niche_distance,
+                threshold=speciation_threshold,
+            )
+
+            species_count = species_info["species_count"]
+            avg_species_size = species_info["avg_species_size"]
+            max_species_size = species_info["max_species_size"]
+            min_species_size = species_info["min_species_size"]
 
         elif niching_method != "none":
             raise ValueError("Unknown niching method: " + str(niching_method))
@@ -275,6 +299,12 @@ def run_ga(problem, population_size=100, generations=100,
             "sharing_max_niche_count": sharing_max_niche_count,
             "sharing_min_niche_count": sharing_min_niche_count,
 
+            "species_count": species_count,
+            "avg_species_size": avg_species_size,
+            "max_species_size": max_species_size,
+            "min_species_size": min_species_size,
+            "speciation_threshold": speciation_threshold if niching_method == "threshold_speciation" else 0.0,
+
             "elapsed_time": time.time() - start_time,
         }
         history.append(gen_stats)
@@ -298,8 +328,25 @@ def run_ga(problem, population_size=100, generations=100,
         new_population = [population[i][:] for i in sorted_indices[:elite_size]]
 
         while len(new_population) < population_size:
-            parent1 = tournament_selection(population, selection_fitnesses)
-            parent2 = tournament_selection(population, selection_fitnesses)
+            if niching_method == "threshold_speciation" and species_members:
+                current_species = choose_species_for_reproduction(species_members)
+
+                parent1 = tournament_selection_from_indices(
+                    population,
+                    selection_fitnesses,
+                    current_species,
+                    tournament_size=3
+                )
+
+                parent2 = tournament_selection_from_indices(
+                    population,
+                    selection_fitnesses,
+                    current_species,
+                    tournament_size=3
+                )
+            else:
+                parent1 = tournament_selection(population, selection_fitnesses)
+                parent2 = tournament_selection(population, selection_fitnesses)
 
             if random.random() < crossover_rate:
                 if crossover_type == "one_point":
