@@ -1,0 +1,94 @@
+C:\Users\omar\AppData\Local\Programs\Python\Python313\python.exe C:\Users\omar\Desktop\AI_lab2_part1\main_hw2_mutation_control_compare.py 
+
+====================================================
+Instance: data/scp41.txt
+Problem size: m=200, n=1000
+
+--- Fixed mutation rate ---
+Running seed 42...
+Early stopping at generation 101, best_cost=433
+seed=42 | cost=433 | feasible=True | time=22.81s | div=0.0692 | avg_mut=0.0150 | max_mut=0.0150 | hyper_gens=0
+
+--- Nonlinear decreasing mutation ---
+Running seed 42...
+Early stopping at generation 101, best_cost=433
+seed=42 | cost=433 | feasible=True | time=32.22s | div=0.0844 | avg_mut=0.0312 | max_mut=0.0500 | hyper_gens=0
+
+--- Triggered hypermutation ---
+Running seed 42...
+Early stopping at generation 101, best_cost=433
+seed=42 | cost=433 | feasible=True | time=36.37s | div=0.6268 | avg_mut=0.0671 | max_mut=0.0800 | hyper_gens=81
+
+====================================================
+Instance: data/scp51.txt
+Problem size: m=200, n=2000
+
+--- Fixed mutation rate ---
+Running seed 42...
+Early stopping at generation 101, best_cost=262
+seed=42 | cost=262 | feasible=True | time=36.59s | div=0.0475 | avg_mut=0.0150 | max_mut=0.0150 | hyper_gens=0
+
+--- Nonlinear decreasing mutation ---
+Running seed 42...
+Early stopping at generation 162, best_cost=262
+seed=42 | cost=262 | feasible=True | time=67.34s | div=0.0236 | avg_mut=0.0234 | max_mut=0.0500 | hyper_gens=0
+
+--- Triggered hypermutation ---
+Running seed 42...
+Early stopping at generation 101, best_cost=262
+seed=42 | cost=262 | feasible=True | time=36.74s | div=0.7816 | avg_mut=0.0562 | max_mut=0.0800 | hyper_gens=64
+
+====================================================
+Instance: data/scpa3.txt
+Problem size: m=300, n=3000
+
+--- Fixed mutation rate ---
+Running seed 42...
+seed=42 | cost=236 | feasible=True | time=130.37s | div=0.0936 | avg_mut=0.0150 | max_mut=0.0150 | hyper_gens=0
+
+--- Nonlinear decreasing mutation ---
+Running seed 42...
+seed=42 | cost=234 | feasible=True | time=122.24s | div=0.0134 | avg_mut=0.0200 | max_mut=0.0500 | hyper_gens=0
+
+--- Triggered hypermutation ---
+Running seed 42...
+Early stopping at generation 101, best_cost=241
+seed=42 | cost=241 | feasible=True | time=54.13s | div=0.8283 | avg_mut=0.0562 | max_mut=0.0800 | hyper_gens=64
+
+
+================ MUTATION CONTROL SUMMARY ================
+instance | method | avg_cost | std | best | worst | div | avg_mut | max_mut | hyper_gens | time | feasible | seeds
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+scp41  | Fixed mutation rate              | avg_cost=433.00 | std=0.00 | best=433 | worst=433 | div=0.0692 | avg_mut=0.0150 | max_mut=0.0150 | hyper_gens=0.0 | time=22.81s | feasible=True | seeds=1
+scp41  | Nonlinear decreasing mutation    | avg_cost=433.00 | std=0.00 | best=433 | worst=433 | div=0.0844 | avg_mut=0.0312 | max_mut=0.0500 | hyper_gens=0.0 | time=32.22s | feasible=True | seeds=1
+scp41  | Triggered hypermutation          | avg_cost=433.00 | std=0.00 | best=433 | worst=433 | div=0.6268 | avg_mut=0.0671 | max_mut=0.0800 | hyper_gens=81.0 | time=36.37s | feasible=True | seeds=1
+scp51  | Fixed mutation rate              | avg_cost=262.00 | std=0.00 | best=262 | worst=262 | div=0.0475 | avg_mut=0.0150 | max_mut=0.0150 | hyper_gens=0.0 | time=36.59s | feasible=True | seeds=1
+scp51  | Nonlinear decreasing mutation    | avg_cost=262.00 | std=0.00 | best=262 | worst=262 | div=0.0236 | avg_mut=0.0234 | max_mut=0.0500 | hyper_gens=0.0 | time=67.34s | feasible=True | seeds=1
+scp51  | Triggered hypermutation          | avg_cost=262.00 | std=0.00 | best=262 | worst=262 | div=0.7816 | avg_mut=0.0562 | max_mut=0.0800 | hyper_gens=64.0 | time=36.74s | feasible=True | seeds=1
+scpa3  | Fixed mutation rate              | avg_cost=236.00 | std=0.00 | best=236 | worst=236 | div=0.0936 | avg_mut=0.0150 | max_mut=0.0150 | hyper_gens=0.0 | time=130.37s | feasible=True | seeds=1
+scpa3  | Nonlinear decreasing mutation    | avg_cost=234.00 | std=0.00 | best=234 | worst=234 | div=0.0134 | avg_mut=0.0200 | max_mut=0.0500 | hyper_gens=0.0 | time=122.24s | feasible=True | seeds=1
+scpa3  | Triggered hypermutation          | avg_cost=241.00 | std=0.00 | best=241 | worst=241 | div=0.8283 | avg_mut=0.0562 | max_mut=0.0800 | hyper_gens=64.0 | time=54.13s | feasible=True | seeds=1
+
+
+================ BEST MUTATION METHOD PER INSTANCE ================
+
+Instance: scp41
+Best cost: Fixed mutation rate | cost = 433 | diversity = 0.0692 | time = 22.81 s
+Highest diversity: Triggered hypermutation | diversity = 0.6268 | cost = 433
+Fastest: Fixed mutation rate | time = 22.81 s | cost = 433
+
+Instance: scp51
+Best cost: Fixed mutation rate | cost = 262 | diversity = 0.0475 | time = 36.59 s
+Highest diversity: Triggered hypermutation | diversity = 0.7816 | cost = 262
+Fastest: Fixed mutation rate | time = 36.59 s | cost = 262
+
+Instance: scpa3
+Best cost: Nonlinear decreasing mutation | cost = 234 | diversity = 0.0134 | time = 122.24 s
+Highest diversity: Triggered hypermutation | diversity = 0.8283 | cost = 241
+Fastest: Triggered hypermutation | time = 54.13 s | cost = 241
+
+Saved detailed results to: results\mutation_control_detailed.csv
+Saved summary results to: results\mutation_control_summary.csv
+Total runtime: 538.86 seconds
+
+Process finished with exit code 0

@@ -14,6 +14,7 @@ from fitness import compute_cost
 from stats import average, std_dev, active_genes_std, sampled_hamming_distance, unique_chromosome_ratio
 from distance import sampled_average_distance
 from baseline import greedy_set_cover
+from mutation_control import get_controlled_mutation_rate
 from niching import (
     fitness_sharing_selection_scores,
     threshold_speciation,
@@ -182,7 +183,15 @@ def run_ga(problem, population_size=100, generations=100,
            sigma_share=0.35,
            sharing_alpha=1.0,
            sharing_sample_size=30,
-           speciation_threshold=0.35):
+           speciation_threshold=0.35,
+           mutation_control_mode="fixed",
+           nonlinear_min_rate=0.005,
+           nonlinear_max_rate=0.05,
+           nonlinear_power=2.0,
+           hypermutation_rate=0.08,
+           hypermutation_trigger_after=20,
+           enable_diversity_injection=True,
+           ):
     """Run the Genetic Algorithm on a Set Cover instance."""
 
     if seed is not None:
@@ -261,6 +270,21 @@ def run_ga(problem, population_size=100, generations=100,
             best_fitness_so_far = best_fit
             last_improvement_generation = generation
 
+        stagnation_generations = generation - last_improvement_generation
+
+        current_mutation_rate, hypermutation_active = get_controlled_mutation_rate(
+            mode=mutation_control_mode,
+            generation=generation,
+            total_generations=generations,
+            base_rate=mutation_rate,
+            stagnation_generations=stagnation_generations,
+            nonlinear_min_rate=nonlinear_min_rate,
+            nonlinear_max_rate=nonlinear_max_rate,
+            nonlinear_power=nonlinear_power,
+            hypermutation_rate=hypermutation_rate,
+            hypermutation_trigger_after=hypermutation_trigger_after,
+        )
+
         # Cost-based selection pressure: avg cost / best cost.
         # Higher value means the best individual is much better than the average.
         selection_pressure = avg_cost / best_cost if best_cost > 0 else 0.0
@@ -305,6 +329,11 @@ def run_ga(problem, population_size=100, generations=100,
             "min_species_size": min_species_size,
             "speciation_threshold": speciation_threshold if niching_method == "threshold_speciation" else 0.0,
 
+            "mutation_control_mode": mutation_control_mode,
+            "current_mutation_rate": current_mutation_rate,
+            "hypermutation_active": hypermutation_active,
+            "stagnation_generations": stagnation_generations,
+
             "elapsed_time": time.time() - start_time,
         }
         history.append(gen_stats)
@@ -312,7 +341,10 @@ def run_ga(problem, population_size=100, generations=100,
         if verbose and (generation % 25 == 0 or generation == generations - 1):
             print(
                 f"  generation {generation + 1}/{generations} | "
-                f"best_cost={best_cost} | time={time.time() - start_time:.2f}s",
+                f"best_cost={best_cost} | "
+                f"mutation={current_mutation_rate:.4f} | "
+                f"hyper={hypermutation_active} | "
+                f"time={time.time() - start_time:.2f}s",
                 flush=True
             )
 
@@ -360,8 +392,8 @@ def run_ga(problem, population_size=100, generations=100,
             else:
                 child1, child2 = parent1[:], parent2[:]
 
-            child1 = bit_flip_mutation(child1, mutation_rate)
-            child2 = bit_flip_mutation(child2, mutation_rate)
+            child1 = bit_flip_mutation(child1, current_mutation_rate)
+            child2 = bit_flip_mutation(child2, current_mutation_rate)
 
             child1 = repair_solution(child1, problem)
             child2 = repair_solution(child2, problem)
@@ -373,7 +405,7 @@ def run_ga(problem, population_size=100, generations=100,
         # If stuck, inject diversity into the new population
         stagnation = generation - last_improvement_generation
 
-        if generation >= min_generations and stagnation > 0 and stagnation % 50 == 0:
+        if enable_diversity_injection and generation >= min_generations and stagnation > 0 and stagnation % 50 == 0:
             new_fitnesses, _ = evaluate_population(new_population, problem)
             population = inject_diversity(new_population, new_fitnesses, problem, replace_ratio=0.2)
         else:
