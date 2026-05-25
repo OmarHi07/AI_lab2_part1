@@ -18,6 +18,7 @@ from mutation_control import (
     get_controlled_mutation_rate,
     compute_individual_mutation_rates,
 )
+from adaptive_fitness import compute_adaptive_fitness_scores
 from niching import (
     fitness_sharing_selection_scores,
     threshold_speciation,
@@ -216,6 +217,11 @@ def run_ga(problem, population_size=100, generations=100,
            individual_mutation_min_rate=0.005,
            individual_mutation_max_rate=0.05,
            age_mutation_threshold=30,
+           adaptive_fitness_mode="none",
+           adaptive_fitness_alpha=0.8,
+           adaptive_fitness_distance="jaccard",
+           adaptive_fitness_sample_size=30,
+           adaptive_fitness_age_threshold=10,
            ):
     """Run the Genetic Algorithm on a Set Cover instance."""
 
@@ -285,6 +291,33 @@ def run_ga(problem, population_size=100, generations=100,
 
         elif niching_method != "none":
             raise ValueError("Unknown niching method: " + str(niching_method))
+
+        adaptive_g_avg = 0.0
+        adaptive_g_max = 0.0
+        adaptive_g_min = 0.0
+        adaptive_score_avg = 0.0
+        adaptive_score_max = 0.0
+        adaptive_score_min = 0.0
+
+        if adaptive_fitness_mode != "none":
+            selection_fitnesses, adaptive_info = compute_adaptive_fitness_scores(
+                mode=adaptive_fitness_mode,
+                population=population,
+                costs=costs,
+                ages=population_ages,
+                alpha=adaptive_fitness_alpha,
+                distance_name=adaptive_fitness_distance,
+                novelty_sample_size=adaptive_fitness_sample_size,
+                sample_seed=generation,
+                age_threshold=adaptive_fitness_age_threshold,
+            )
+
+            adaptive_g_avg = adaptive_info["avg_g_score"]
+            adaptive_g_max = adaptive_info["max_g_score"]
+            adaptive_g_min = adaptive_info["min_g_score"]
+            adaptive_score_avg = adaptive_info["avg_adaptive_score"]
+            adaptive_score_max = adaptive_info["max_adaptive_score"]
+            adaptive_score_min = adaptive_info["min_adaptive_score"]
 
         best_individual, best_fit = get_best_individual(population, fitnesses)
 
@@ -384,6 +417,15 @@ def run_ga(problem, population_size=100, generations=100,
             "max_individual_mutation_rate": max_individual_mutation_rate,
             "avg_population_age": avg_population_age,
             "max_population_age": max_population_age,
+
+            "adaptive_fitness_mode": adaptive_fitness_mode,
+            "adaptive_fitness_alpha": adaptive_fitness_alpha if adaptive_fitness_mode != "none" else 0.0,
+            "adaptive_g_avg": adaptive_g_avg,
+            "adaptive_g_max": adaptive_g_max,
+            "adaptive_g_min": adaptive_g_min,
+            "adaptive_score_avg": adaptive_score_avg,
+            "adaptive_score_max": adaptive_score_max,
+            "adaptive_score_min": adaptive_score_min,
 
             "elapsed_time": time.time() - start_time,
         }

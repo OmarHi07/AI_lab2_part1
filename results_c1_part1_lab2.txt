@@ -1,0 +1,93 @@
+C:\Users\omar\AppData\Local\Programs\Python\Python313\python.exe C:\Users\omar\Desktop\AI_lab2_part1\main_hw2_adaptive_fitness_compare.py 
+
+====================================================
+Instance: data/scp41.txt
+Problem size: m=200, n=1000
+
+--- Objective fitness only ---
+Running seed 42...
+Early stopping at generation 101, best_cost=433
+seed=42 | cost=433 | feasible=True | time=21.69s | div=0.0692 | avg_g=0.0000 | avg_score=0.0000 | avg_age=1.62 | max_age=100
+
+--- Adaptive fitness with novelty g(x,t) ---
+Running seed 42...
+Early stopping at generation 101, best_cost=433
+seed=42 | cost=433 | feasible=True | time=103.59s | div=0.1714 | avg_g=0.1835 | avg_score=0.5914 | avg_age=1.62 | max_age=100
+
+--- Adaptive fitness with age g(x,t) ---
+Running seed 42...
+Early stopping at generation 101, best_cost=433
+seed=42 | cost=433 | feasible=True | time=21.57s | div=0.0656 | avg_g=0.0311 | avg_score=0.5588 | avg_age=1.62 | max_age=100
+
+====================================================
+Instance: data/scp51.txt
+Problem size: m=200, n=2000
+
+--- Objective fitness only ---
+Running seed 42...
+Early stopping at generation 101, best_cost=262
+seed=42 | cost=262 | feasible=True | time=33.82s | div=0.0475 | avg_g=0.0000 | avg_score=0.0000 | avg_age=1.15 | max_age=83
+
+--- Adaptive fitness with novelty g(x,t) ---
+Running seed 42...
+seed=42 | cost=260 | feasible=True | time=326.72s | div=0.2137 | avg_g=0.2274 | avg_score=0.5748 | avg_age=0.95 | max_age=81
+
+--- Adaptive fitness with age g(x,t) ---
+Running seed 42...
+Early stopping at generation 101, best_cost=262
+seed=42 | cost=262 | feasible=True | time=27.63s | div=0.0475 | avg_g=0.0273 | avg_score=0.5453 | avg_age=1.15 | max_age=83
+
+====================================================
+Instance: data/scpa3.txt
+Problem size: m=300, n=3000
+
+--- Objective fitness only ---
+Running seed 42...
+seed=42 | cost=236 | feasible=True | time=147.88s | div=0.0936 | avg_g=0.0000 | avg_score=0.0000 | avg_age=0.78 | max_age=80
+
+--- Adaptive fitness with novelty g(x,t) ---
+Running seed 42...
+Early stopping at generation 170, best_cost=236
+seed=42 | cost=236 | feasible=True | time=491.53s | div=0.1981 | avg_g=0.2580 | avg_score=0.5632 | avg_age=0.81 | max_age=80
+
+--- Adaptive fitness with age g(x,t) ---
+Running seed 42...
+seed=42 | cost=236 | feasible=True | time=139.42s | div=0.0920 | avg_g=0.0265 | avg_score=0.5010 | avg_age=0.56 | max_age=68
+
+
+================ ADAPTIVE FITNESS SUMMARY ================
+instance | method | avg_cost | std | best | worst | div | avg_g | avg_adapt_score | avg_age | max_age | time | feasible | seeds
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+scp41  | Objective fitness only                 | avg_cost=433.00 | std=0.00 | best=433 | worst=433 | div=0.0692 | avg_g=0.0000 | avg_score=0.0000 | avg_age=1.62 | max_age=100 | time=21.69s | feasible=True | seeds=1
+scp41  | Adaptive fitness with novelty g(x,t)   | avg_cost=433.00 | std=0.00 | best=433 | worst=433 | div=0.1714 | avg_g=0.1835 | avg_score=0.5914 | avg_age=1.62 | max_age=100 | time=103.59s | feasible=True | seeds=1
+scp41  | Adaptive fitness with age g(x,t)       | avg_cost=433.00 | std=0.00 | best=433 | worst=433 | div=0.0656 | avg_g=0.0311 | avg_score=0.5588 | avg_age=1.62 | max_age=100 | time=21.57s | feasible=True | seeds=1
+scp51  | Objective fitness only                 | avg_cost=262.00 | std=0.00 | best=262 | worst=262 | div=0.0475 | avg_g=0.0000 | avg_score=0.0000 | avg_age=1.15 | max_age=83 | time=33.82s | feasible=True | seeds=1
+scp51  | Adaptive fitness with novelty g(x,t)   | avg_cost=260.00 | std=0.00 | best=260 | worst=260 | div=0.2137 | avg_g=0.2274 | avg_score=0.5748 | avg_age=0.95 | max_age=81 | time=326.72s | feasible=True | seeds=1
+scp51  | Adaptive fitness with age g(x,t)       | avg_cost=262.00 | std=0.00 | best=262 | worst=262 | div=0.0475 | avg_g=0.0273 | avg_score=0.5453 | avg_age=1.15 | max_age=83 | time=27.63s | feasible=True | seeds=1
+scpa3  | Objective fitness only                 | avg_cost=236.00 | std=0.00 | best=236 | worst=236 | div=0.0936 | avg_g=0.0000 | avg_score=0.0000 | avg_age=0.78 | max_age=80 | time=147.88s | feasible=True | seeds=1
+scpa3  | Adaptive fitness with novelty g(x,t)   | avg_cost=236.00 | std=0.00 | best=236 | worst=236 | div=0.1981 | avg_g=0.2580 | avg_score=0.5632 | avg_age=0.81 | max_age=80 | time=491.53s | feasible=True | seeds=1
+scpa3  | Adaptive fitness with age g(x,t)       | avg_cost=236.00 | std=0.00 | best=236 | worst=236 | div=0.0920 | avg_g=0.0265 | avg_score=0.5010 | avg_age=0.56 | max_age=68 | time=139.42s | feasible=True | seeds=1
+
+
+================ BEST ADAPTIVE FITNESS METHOD PER INSTANCE ================
+
+Instance: scp41
+Best cost: Objective fitness only | cost = 433 | diversity = 0.0692 | time = 21.69 s
+Highest diversity: Adaptive fitness with novelty g(x,t) | diversity = 0.1714 | cost = 433
+Fastest: Adaptive fitness with age g(x,t) | time = 21.57 s | cost = 433
+
+Instance: scp51
+Best cost: Adaptive fitness with novelty g(x,t) | cost = 260 | diversity = 0.2137 | time = 326.72 s
+Highest diversity: Adaptive fitness with novelty g(x,t) | diversity = 0.2137 | cost = 260
+Fastest: Adaptive fitness with age g(x,t) | time = 27.63 s | cost = 262
+
+Instance: scpa3
+Best cost: Objective fitness only | cost = 236 | diversity = 0.0936 | time = 147.88 s
+Highest diversity: Adaptive fitness with novelty g(x,t) | diversity = 0.1981 | cost = 236
+Fastest: Adaptive fitness with age g(x,t) | time = 139.42 s | cost = 236
+
+Saved detailed results to: results\adaptive_fitness_detailed.csv
+Saved summary results to: results\adaptive_fitness_summary.csv
+Total runtime: 1313.88 seconds
+
+Process finished with exit code 0
