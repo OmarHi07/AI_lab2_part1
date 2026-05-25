@@ -94,3 +94,98 @@ def get_controlled_mutation_rate(
         )
 
     raise ValueError("Unknown mutation control mode: " + str(mode))
+
+def relative_fitness_adaptive_rate(
+    individual_fitness,
+    min_fitness,
+    max_fitness,
+    p_min=0.005,
+    p_max=0.05,
+):
+    """
+    Relative-fitness adaptive mutation.
+
+    Better individuals get mutation close to p_min.
+    Worse individuals get mutation close to p_max.
+
+    Since higher fitness is better:
+    - max_fitness -> best individual
+    - min_fitness -> worst individual
+    """
+    if max_fitness == min_fitness:
+        return p_min
+
+    badness = (max_fitness - individual_fitness) / (max_fitness - min_fitness)
+    badness = max(0.0, min(1.0, badness))
+
+    return p_min + (p_max - p_min) * badness
+
+
+def age_based_adaptive_rate(
+    age,
+    p_min=0.005,
+    p_max=0.05,
+    age_threshold=30,
+):
+    """
+    Age-based adaptive mutation.
+
+    Young individuals get mutation close to p_min.
+    Old individuals gradually approach p_max.
+    """
+    if age_threshold <= 0:
+        return p_max
+
+    age_factor = age / age_threshold
+    age_factor = max(0.0, min(1.0, age_factor))
+
+    return p_min + (p_max - p_min) * age_factor
+
+
+def compute_individual_mutation_rates(
+    mode,
+    fitnesses,
+    ages,
+    base_rate,
+    p_min=0.005,
+    p_max=0.05,
+    age_threshold=30,
+):
+    """
+    Compute a mutation rate for every individual in the current population.
+
+    Supported modes:
+    - none
+    - relative_fitness
+    - age_based
+    """
+    if mode == "none":
+        return [base_rate for _ in fitnesses]
+
+    if mode == "relative_fitness":
+        min_fitness = min(fitnesses)
+        max_fitness = max(fitnesses)
+
+        return [
+            relative_fitness_adaptive_rate(
+                individual_fitness=fit,
+                min_fitness=min_fitness,
+                max_fitness=max_fitness,
+                p_min=p_min,
+                p_max=p_max,
+            )
+            for fit in fitnesses
+        ]
+
+    if mode == "age_based":
+        return [
+            age_based_adaptive_rate(
+                age=age,
+                p_min=p_min,
+                p_max=p_max,
+                age_threshold=age_threshold,
+            )
+            for age in ages
+        ]
+
+    raise ValueError("Unknown individual mutation mode: " + str(mode))

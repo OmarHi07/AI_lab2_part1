@@ -14,7 +14,10 @@ from fitness import compute_cost
 from stats import average, std_dev, active_genes_std, sampled_hamming_distance, unique_chromosome_ratio
 from distance import sampled_average_distance
 from baseline import greedy_set_cover
-from mutation_control import get_controlled_mutation_rate
+from mutation_control import (
+    get_controlled_mutation_rate,
+    compute_individual_mutation_rates,
+)
 from niching import (
     fitness_sharing_selection_scores,
     threshold_speciation,
@@ -144,6 +147,24 @@ def get_best_individual(population, fitnesses):
     best_idx = max(range(len(population)), key=lambda i: fitnesses[i])
     return population[best_idx][:], fitnesses[best_idx]
 
+def tournament_selection_index(fitnesses, member_indices=None, tournament_size=3):
+    """
+    Select an individual index using tournament selection.
+
+    If member_indices is given, selection is restricted to those indices.
+    This allows us to know the selected parent's fitness and age.
+    """
+    if member_indices is None:
+        member_indices = list(range(len(fitnesses)))
+
+    if not member_indices:
+        return random.randrange(len(fitnesses))
+
+    actual_size = min(tournament_size, len(member_indices))
+    candidates = random.sample(member_indices, actual_size)
+
+    return max(candidates, key=lambda i: fitnesses[i])
+
 
 def plot_ga_graphs(history):
     generations = [h["generation"] for h in history]
@@ -191,6 +212,10 @@ def run_ga(problem, population_size=100, generations=100,
            hypermutation_rate=0.08,
            hypermutation_trigger_after=20,
            enable_diversity_injection=True,
+           individual_mutation_mode="none",
+           individual_mutation_min_rate=0.005,
+           individual_mutation_max_rate=0.05,
+           age_mutation_threshold=30,
            ):
     """Run the Genetic Algorithm on a Set Cover instance."""
 
@@ -205,6 +230,8 @@ def run_ga(problem, population_size=100, generations=100,
         activation_prob=0.05,
         use_greedy_seed=True
     )
+    population_ages = [0 for _ in population]
+
     history = []
 
     best_cost_so_far = float("inf")
@@ -285,6 +312,23 @@ def run_ga(problem, population_size=100, generations=100,
             hypermutation_trigger_after=hypermutation_trigger_after,
         )
 
+        individual_mutation_rates = compute_individual_mutation_rates(
+            mode=individual_mutation_mode,
+            fitnesses=fitnesses,
+            ages=population_ages,
+            base_rate=current_mutation_rate,
+            p_min=individual_mutation_min_rate,
+            p_max=individual_mutation_max_rate,
+            age_threshold=age_mutation_threshold,
+        )
+
+        avg_individual_mutation_rate = average(individual_mutation_rates)
+        min_individual_mutation_rate = min(individual_mutation_rates)
+        max_individual_mutation_rate = max(individual_mutation_rates)
+
+        avg_population_age = average(population_ages)
+        max_population_age = max(population_ages) if population_ages else 0
+
         # Cost-based selection pressure: avg cost / best cost.
         # Higher value means the best individual is much better than the average.
         selection_pressure = avg_cost / best_cost if best_cost > 0 else 0.0
@@ -334,6 +378,13 @@ def run_ga(problem, population_size=100, generations=100,
             "hypermutation_active": hypermutation_active,
             "stagnation_generations": stagnation_generations,
 
+            "individual_mutation_mode": individual_mutation_mode,
+            "avg_individual_mutation_rate": avg_individual_mutation_rate,
+            "min_individual_mutation_rate": min_individual_mutation_rate,
+            "max_individual_mutation_rate": max_individual_mutation_rate,
+            "avg_population_age": avg_population_age,
+            "max_population_age": max_population_age,
+
             "elapsed_time": time.time() - start_time,
         }
         history.append(gen_stats)
@@ -358,27 +409,38 @@ def run_ga(problem, population_size=100, generations=100,
         # Fitness sharing is used for parent selection, not for deleting the real best.
         sorted_indices = sorted(range(len(population)), key=lambda i: fitnesses[i], reverse=True)
         new_population = [population[i][:] for i in sorted_indices[:elite_size]]
+        new_population_ages = [population_ages[i] + 1 for i in sorted_indices[:elite_size]]
 
         while len(new_population) < population_size:
             if niching_method == "threshold_speciation" and species_members:
                 current_species = choose_species_for_reproduction(species_members)
 
-                parent1 = tournament_selection_from_indices(
-                    population,
+                parent1_idx = tournament_selection_index(
                     selection_fitnesses,
-                    current_species,
+                    member_indices=current_species,
                     tournament_size=3
                 )
 
-                parent2 = tournament_selection_from_indices(
-                    population,
+                parent2_idx = tournament_selection_index(
                     selection_fitnesses,
-                    current_species,
+                    member_indices=current_species,
                     tournament_size=3
                 )
             else:
-                parent1 = tournament_selection(population, selection_fitnesses)
-                parent2 = tournament_selection(population, selection_fitnesses)
+                parent1_idx = tournament_selection_index(
+                    selection_fitnesses,
+                    member_indices=None,
+                    tournament_size=3
+                )
+
+                parent2_idx = tournament_selection_index(
+                    selection_fitnesses,
+                    member_indices=None,
+                    tournament_size=3
+                )
+
+            parent1 = population[parent1_idx][:]
+            parent2 = population[parent2_idx][:]
 
             if random.random() < crossover_rate:
                 if crossover_type == "one_point":
@@ -392,15 +454,25 @@ def run_ga(problem, population_size=100, generations=100,
             else:
                 child1, child2 = parent1[:], parent2[:]
 
-            child1 = bit_flip_mutation(child1, current_mutation_rate)
-            child2 = bit_flip_mutation(child2, current_mutation_rate)
+            if individual_mutation_mode == "none":
+                child_mutation_rate = current_mutation_rate
+            else:
+                child_mutation_rate = (
+                                              individual_mutation_rates[parent1_idx] +
+                                              individual_mutation_rates[parent2_idx]
+                                      ) / 2
+
+            child1 = bit_flip_mutation(child1, child_mutation_rate)
+            child2 = bit_flip_mutation(child2, child_mutation_rate)
 
             child1 = repair_solution(child1, problem)
             child2 = repair_solution(child2, problem)
 
             new_population.append(child1)
+            new_population_ages.append(0)
             if len(new_population) < population_size:
                 new_population.append(child2)
+                new_population_ages.append(0)
 
         # If stuck, inject diversity into the new population
         stagnation = generation - last_improvement_generation
@@ -408,8 +480,10 @@ def run_ga(problem, population_size=100, generations=100,
         if enable_diversity_injection and generation >= min_generations and stagnation > 0 and stagnation % 50 == 0:
             new_fitnesses, _ = evaluate_population(new_population, problem)
             population = inject_diversity(new_population, new_fitnesses, problem, replace_ratio=0.2)
+            population_ages = [0 for _ in population]
         else:
             population = new_population
+            population_ages = new_population_ages
 
     if show_plots:
         plot_ga_graphs(history)

@@ -1,0 +1,93 @@
+C:\Users\omar\AppData\Local\Programs\Python\Python313\python.exe C:\Users\omar\Desktop\AI_lab2_part1\main_hw2_individual_mutation_compare.py 
+
+====================================================
+Instance: data/scp41.txt
+Problem size: m=200, n=1000
+
+--- No individual adaptive mutation ---
+Running seed 42...
+Early stopping at generation 101, best_cost=433
+seed=42 | cost=433 | feasible=True | time=17.63s | div=0.0692 | avg_ind_mut=0.0150 | max_ind_mut=0.0150 | avg_age=1.62 | max_age=100
+
+--- Relative-fitness adaptive mutation p=0.015-0.06 ---
+Running seed 42...
+Early stopping at generation 101, best_cost=433
+seed=42 | cost=433 | feasible=True | time=17.88s | div=0.0664 | avg_ind_mut=0.0193 | max_ind_mut=0.0600 | avg_age=1.61 | max_age=100
+
+--- Age-based adaptive mutation p=0.015-0.06 ageT=10 ---
+Running seed 42...
+Early stopping at generation 101, best_cost=433
+seed=42 | cost=433 | feasible=True | time=18.34s | div=0.0729 | avg_ind_mut=0.0164 | max_ind_mut=0.0600 | avg_age=1.62 | max_age=100
+
+====================================================
+Instance: data/scp51.txt
+Problem size: m=200, n=2000
+
+--- No individual adaptive mutation ---
+Running seed 42...
+Early stopping at generation 101, best_cost=262
+seed=42 | cost=262 | feasible=True | time=28.42s | div=0.0475 | avg_ind_mut=0.0150 | max_ind_mut=0.0150 | avg_age=1.15 | max_age=83
+
+--- Relative-fitness adaptive mutation p=0.015-0.06 ---
+Running seed 42...
+Early stopping at generation 101, best_cost=262
+seed=42 | cost=262 | feasible=True | time=28.48s | div=0.0532 | avg_ind_mut=0.0200 | max_ind_mut=0.0600 | avg_age=1.15 | max_age=85
+
+--- Age-based adaptive mutation p=0.015-0.06 ageT=10 ---
+Running seed 42...
+Early stopping at generation 101, best_cost=262
+seed=42 | cost=262 | feasible=True | time=28.29s | div=0.0746 | avg_ind_mut=0.0162 | max_ind_mut=0.0600 | avg_age=1.18 | max_age=85
+
+====================================================
+Instance: data/scpa3.txt
+Problem size: m=300, n=3000
+
+--- No individual adaptive mutation ---
+Running seed 42...
+seed=42 | cost=236 | feasible=True | time=113.31s | div=0.0936 | avg_ind_mut=0.0150 | max_ind_mut=0.0150 | avg_age=0.78 | max_age=80
+
+--- Relative-fitness adaptive mutation p=0.015-0.06 ---
+Running seed 42...
+seed=42 | cost=236 | feasible=True | time=116.07s | div=0.1527 | avg_ind_mut=0.0236 | max_ind_mut=0.0600 | avg_age=0.54 | max_age=50
+
+--- Age-based adaptive mutation p=0.015-0.06 ageT=10 ---
+Running seed 42...
+seed=42 | cost=235 | feasible=True | time=156.13s | div=0.2125 | avg_ind_mut=0.0162 | max_ind_mut=0.0600 | avg_age=0.70 | max_age=72
+
+
+================ INDIVIDUAL MUTATION SUMMARY ================
+instance | method | avg_cost | std | best | worst | div | avg_ind_mut | max_ind_mut | avg_age | max_age | time | feasible | seeds
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+scp41  | No individual adaptive mutation      | avg_cost=433.00 | std=0.00 | best=433 | worst=433 | div=0.0692 | avg_ind_mut=0.0150 | max_ind_mut=0.0150 | avg_age=1.62 | max_age=100 | time=17.63s | feasible=True | seeds=1
+scp41  | Relative-fitness adaptive mutation p=0.015-0.06 | avg_cost=433.00 | std=0.00 | best=433 | worst=433 | div=0.0664 | avg_ind_mut=0.0193 | max_ind_mut=0.0600 | avg_age=1.61 | max_age=100 | time=17.88s | feasible=True | seeds=1
+scp41  | Age-based adaptive mutation p=0.015-0.06 ageT=10 | avg_cost=433.00 | std=0.00 | best=433 | worst=433 | div=0.0729 | avg_ind_mut=0.0164 | max_ind_mut=0.0600 | avg_age=1.62 | max_age=100 | time=18.34s | feasible=True | seeds=1
+scp51  | No individual adaptive mutation      | avg_cost=262.00 | std=0.00 | best=262 | worst=262 | div=0.0475 | avg_ind_mut=0.0150 | max_ind_mut=0.0150 | avg_age=1.15 | max_age=83 | time=28.42s | feasible=True | seeds=1
+scp51  | Relative-fitness adaptive mutation p=0.015-0.06 | avg_cost=262.00 | std=0.00 | best=262 | worst=262 | div=0.0532 | avg_ind_mut=0.0200 | max_ind_mut=0.0600 | avg_age=1.15 | max_age=85 | time=28.48s | feasible=True | seeds=1
+scp51  | Age-based adaptive mutation p=0.015-0.06 ageT=10 | avg_cost=262.00 | std=0.00 | best=262 | worst=262 | div=0.0746 | avg_ind_mut=0.0162 | max_ind_mut=0.0600 | avg_age=1.18 | max_age=85 | time=28.29s | feasible=True | seeds=1
+scpa3  | No individual adaptive mutation      | avg_cost=236.00 | std=0.00 | best=236 | worst=236 | div=0.0936 | avg_ind_mut=0.0150 | max_ind_mut=0.0150 | avg_age=0.78 | max_age=80 | time=113.31s | feasible=True | seeds=1
+scpa3  | Relative-fitness adaptive mutation p=0.015-0.06 | avg_cost=236.00 | std=0.00 | best=236 | worst=236 | div=0.1527 | avg_ind_mut=0.0236 | max_ind_mut=0.0600 | avg_age=0.54 | max_age=50 | time=116.07s | feasible=True | seeds=1
+scpa3  | Age-based adaptive mutation p=0.015-0.06 ageT=10 | avg_cost=235.00 | std=0.00 | best=235 | worst=235 | div=0.2125 | avg_ind_mut=0.0162 | max_ind_mut=0.0600 | avg_age=0.70 | max_age=72 | time=156.13s | feasible=True | seeds=1
+
+
+================ BEST INDIVIDUAL MUTATION METHOD PER INSTANCE ================
+
+Instance: scp41
+Best cost: No individual adaptive mutation | cost = 433 | diversity = 0.0692 | time = 17.63 s
+Highest diversity: Age-based adaptive mutation p=0.015-0.06 ageT=10 | diversity = 0.0729 | cost = 433
+Fastest: No individual adaptive mutation | time = 17.63 s | cost = 433
+
+Instance: scp51
+Best cost: No individual adaptive mutation | cost = 262 | diversity = 0.0475 | time = 28.42 s
+Highest diversity: Age-based adaptive mutation p=0.015-0.06 ageT=10 | diversity = 0.0746 | cost = 262
+Fastest: Age-based adaptive mutation p=0.015-0.06 ageT=10 | time = 28.29 s | cost = 262
+
+Instance: scpa3
+Best cost: Age-based adaptive mutation p=0.015-0.06 ageT=10 | cost = 235 | diversity = 0.2125 | time = 156.13 s
+Highest diversity: Age-based adaptive mutation p=0.015-0.06 ageT=10 | diversity = 0.2125 | cost = 235
+Fastest: No individual adaptive mutation | time = 113.31 s | cost = 236
+
+Saved detailed results to: results\individual_mutation_second_test_detailed.csv
+Saved summary results to: results\individual_mutation_second_test_summary.csv
+Total runtime: 524.58 seconds
+
+Process finished with exit code 0
