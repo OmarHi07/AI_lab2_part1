@@ -1,0 +1,110 @@
+C:\Users\omar\AppData\Local\Programs\Python\Python313\python.exe C:\Users\omar\Desktop\AI_lab2_part1\main_hw2_final_all10.py 
+Final HW2 configuration:
+Final selected HW2 configuration: novelty-based g(x,t), alpha=0.7
+Seeds: [42]
+
+====================================================
+Instance: data/scp41.txt
+Problem size: m=200, n=1000
+Lecturer target: 429-433
+Running seed 42...
+Early stopping at generation 101, best_cost=433
+seed=42 | cost=433 | target=429-433 | gap=0 | inside=True | feasible=True | time=88.52s | div=0.1408 | gens=101
+
+====================================================
+Instance: data/scp42.txt
+Problem size: m=200, n=1000
+Lecturer target: 512-517
+Running seed 42...
+Early stopping at generation 101, best_cost=512
+seed=42 | cost=512 | target=512-517 | gap=0 | inside=True | feasible=True | time=88.53s | div=0.1771 | gens=101
+
+====================================================
+Instance: data/scp43.txt
+Problem size: m=200, n=1000
+Lecturer target: 516-521
+Running seed 42...
+Early stopping at generation 130, best_cost=516
+seed=42 | cost=516 | target=516-521 | gap=0 | inside=True | feasible=True | time=106.62s | div=0.1216 | gens=130
+
+====================================================
+Instance: data/scp44.txt
+Problem size: m=200, n=1000
+Lecturer target: 494-499
+Running seed 42...
+Early stopping at generation 114, best_cost=494
+seed=42 | cost=494 | target=494-499 | gap=0 | inside=True | feasible=True | time=102.15s | div=0.1571 | gens=114
+
+====================================================
+Instance: data/scp51.txt
+Problem size: m=200, n=2000
+Lecturer target: 253-255
+Running seed 42...
+Early stopping at generation 205, best_cost=255
+seed=42 | cost=255 | target=253-255 | gap=0 | inside=True | feasible=True | time=326.86s | div=0.1664 | gens=205
+
+====================================================
+Instance: data/scp52.txt
+Problem size: m=200, n=2000
+Lecturer target: 302-305
+Running seed 42...
+Early stopping at generation 140, best_cost=305
+seed=42 | cost=305 | target=302-305 | gap=0 | inside=True | feasible=True | time=231.51s | div=0.1809 | gens=140
+
+====================================================
+Instance: data/scp53.txt
+Problem size: m=200, n=2000
+Lecturer target: 226-228
+Running seed 42...
+Early stopping at generation 162, best_cost=228
+seed=42 | cost=228 | target=226-228 | gap=0 | inside=True | feasible=True | time=265.32s | div=0.1835 | gens=162
+
+====================================================
+Instance: data/scpa1.txt
+Problem size: m=300, n=3000
+Lecturer target: 253-255
+Running seed 42...
+Early stopping at generation 101, best_cost=257
+seed=42 | cost=257 | target=253-255 | gap=2 | inside=False | feasible=True | time=258.96s | div=0.1501 | gens=101
+
+====================================================
+Instance: data/scpa2.txt
+Problem size: m=300, n=3000
+Lecturer target: 252-254
+Running seed 42...
+Early stopping at generation 105, best_cost=258
+seed=42 | cost=258 | target=252-254 | gap=4 | inside=False | feasible=True | time=269.09s | div=0.1231 | gens=105
+
+====================================================
+Instance: data/scpa3.txt
+Problem size: m=300, n=3000
+Lecturer target: 232-234
+Running seed 42...
+Early stopping at generation 137, best_cost=238
+seed=42 | cost=238 | target=232-234 | gap=4 | inside=False | feasible=True | time=359.00s | div=0.1940 | gens=137
+
+
+================ FINAL HW2 CONFIG ON ALL 10 PROBLEMS ================
+instance | target | avg_cost | best | worst | gap | inside | div | gens | time | feasible | seeds
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+scp41  | 429-433   | avg_cost=433.00 | best=433 | worst=433 | gap=0.00 | inside=True | div=0.1408 | gens=101.0 | time=88.52s | feasible=True | seeds=1
+scp42  | 512-517   | avg_cost=512.00 | best=512 | worst=512 | gap=0.00 | inside=True | div=0.1771 | gens=101.0 | time=88.53s | feasible=True | seeds=1
+scp43  | 516-521   | avg_cost=516.00 | best=516 | worst=516 | gap=0.00 | inside=True | div=0.1216 | gens=130.0 | time=106.62s | feasible=True | seeds=1
+scp44  | 494-499   | avg_cost=494.00 | best=494 | worst=494 | gap=0.00 | inside=True | div=0.1571 | gens=114.0 | time=102.15s | feasible=True | seeds=1
+scp51  | 253-255   | avg_cost=255.00 | best=255 | worst=255 | gap=0.00 | inside=True | div=0.1664 | gens=205.0 | time=326.86s | feasible=True | seeds=1
+scp52  | 302-305   | avg_cost=305.00 | best=305 | worst=305 | gap=0.00 | inside=True | div=0.1809 | gens=140.0 | time=231.51s | feasible=True | seeds=1
+scp53  | 226-228   | avg_cost=228.00 | best=228 | worst=228 | gap=0.00 | inside=True | div=0.1835 | gens=162.0 | time=265.32s | feasible=True | seeds=1
+scpa1  | 253-255   | avg_cost=257.00 | best=257 | worst=257 | gap=2.00 | inside=False | div=0.1501 | gens=101.0 | time=258.96s | feasible=True | seeds=1
+scpa2  | 252-254   | avg_cost=258.00 | best=258 | worst=258 | gap=4.00 | inside=False | div=0.1231 | gens=105.0 | time=269.09s | feasible=True | seeds=1
+scpa3  | 232-234   | avg_cost=238.00 | best=238 | worst=238 | gap=4.00 | inside=False | div=0.1940 | gens=137.0 | time=359.00s | feasible=True | seeds=1
+
+Overall:
+Problems inside target: 7 / 10
+Total target gap: 10
+Average target gap: 1.0
+
+Saved detailed results to: results\final_hw2_all10_detailed.csv
+Saved summary results to: results\final_hw2_all10_summary.csv
+Total runtime: 2096.62 seconds
+
+Process finished with exit code 0

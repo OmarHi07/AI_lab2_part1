@@ -1,0 +1,143 @@
+C:\Users\omar\AppData\Local\Programs\Python\Python313\python.exe C:\Users\omar\Desktop\AI_lab2_part1\main_hw2_best_config_candidates.py 
+
+====================================================
+Instance: data/scp41.txt
+Problem size: m=200, n=1000
+
+--- HW2 novelty fitness alpha=0.6 ---
+Novelty-based g(x,t), alpha=0.6
+Running seed 42...
+Early stopping at generation 101, best_cost=433
+seed=42 | cost=433 | gap=0 | feasible=True | time=87.53s | div=0.1714 | gens=101
+
+--- HW2 novelty fitness alpha=0.7 ---
+Novelty-based g(x,t), alpha=0.7
+Running seed 42...
+Early stopping at generation 101, best_cost=433
+seed=42 | cost=433 | gap=0 | feasible=True | time=87.82s | div=0.1408 | gens=101
+
+--- HW2 fast nonlinear mutation ---
+Nonlinear mutation with faster decay for 500 generations
+Running seed 42...
+Early stopping at generation 101, best_cost=433
+seed=42 | cost=433 | gap=0 | feasible=True | time=21.93s | div=0.0601 | gens=101
+
+--- HW2 fast nonlinear + novelty alpha=0.7 ---
+Fast nonlinear mutation + novelty-based g(x,t), alpha=0.7
+Running seed 42...
+Early stopping at generation 101, best_cost=432
+seed=42 | cost=432 | gap=0 | feasible=True | time=88.81s | div=0.1550 | gens=101
+
+--- HW2 age-based individual mutation ---
+Age-based individual mutation, p=0.015-0.06, ageT=10
+Running seed 42...
+Early stopping at generation 101, best_cost=433
+seed=42 | cost=433 | gap=0 | feasible=True | time=18.40s | div=0.0729 | gens=101
+
+====================================================
+Instance: data/scp51.txt
+Problem size: m=200, n=2000
+
+--- HW2 novelty fitness alpha=0.6 ---
+Novelty-based g(x,t), alpha=0.6
+Running seed 42...
+Early stopping at generation 220, best_cost=260
+seed=42 | cost=260 | gap=5 | feasible=True | time=361.86s | div=0.2000 | gens=220
+
+--- HW2 novelty fitness alpha=0.7 ---
+Novelty-based g(x,t), alpha=0.7
+Running seed 42...
+Early stopping at generation 205, best_cost=255
+seed=42 | cost=255 | gap=0 | feasible=True | time=327.37s | div=0.1664 | gens=205
+
+--- HW2 fast nonlinear mutation ---
+Nonlinear mutation with faster decay for 500 generations
+Running seed 42...
+Early stopping at generation 114, best_cost=262
+seed=42 | cost=262 | gap=7 | feasible=True | time=37.37s | div=0.0402 | gens=114
+
+--- HW2 fast nonlinear + novelty alpha=0.7 ---
+Fast nonlinear mutation + novelty-based g(x,t), alpha=0.7
+Running seed 42...
+Early stopping at generation 267, best_cost=255
+seed=42 | cost=255 | gap=0 | feasible=True | time=434.42s | div=0.1111 | gens=267
+
+--- HW2 age-based individual mutation ---
+Age-based individual mutation, p=0.015-0.06, ageT=10
+Running seed 42...
+Early stopping at generation 101, best_cost=262
+seed=42 | cost=262 | gap=7 | feasible=True | time=28.42s | div=0.0746 | gens=101
+
+====================================================
+Instance: data/scpa3.txt
+Problem size: m=300, n=3000
+
+--- HW2 novelty fitness alpha=0.6 ---
+Novelty-based g(x,t), alpha=0.6
+Running seed 42...
+Early stopping at generation 170, best_cost=236
+seed=42 | cost=236 | gap=2 | feasible=True | time=450.95s | div=0.1981 | gens=170
+
+--- HW2 novelty fitness alpha=0.7 ---
+Novelty-based g(x,t), alpha=0.7
+Running seed 42...
+Early stopping at generation 137, best_cost=238
+seed=42 | cost=238 | gap=4 | feasible=True | time=358.08s | div=0.1940 | gens=137
+
+--- HW2 fast nonlinear mutation ---
+Nonlinear mutation with faster decay for 500 generations
+Running seed 42...
+Early stopping at generation 318, best_cost=233
+seed=42 | cost=233 | gap=0 | feasible=True | time=166.55s | div=0.0107 | gens=318
+
+--- HW2 fast nonlinear + novelty alpha=0.7 ---
+Fast nonlinear mutation + novelty-based g(x,t), alpha=0.7
+Running seed 42...
+Early stopping at generation 116, best_cost=243
+seed=42 | cost=243 | gap=9 | feasible=True | time=314.95s | div=0.2253 | gens=116
+
+--- HW2 age-based individual mutation ---
+Age-based individual mutation, p=0.015-0.06, ageT=10
+Running seed 42...
+Early stopping at generation 212, best_cost=235
+seed=42 | cost=235 | gap=1 | feasible=True | time=165.95s | div=0.2575 | gens=212
+
+
+================ HW2 BEST CONFIG CANDIDATES ================
+instance | config | avg_cost | best | worst | target_gap | div | gens | avg_mut | avg_g | time | feasible | seeds
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+scp41  | HW2 novelty fitness alpha=0.6          | avg_cost=433.00 | best=433 | worst=433 | gap=0.00 | div=0.1714 | gens=101.0 | avg_mut=0.0150 | avg_g=0.1835 | time=87.53s | feasible=True | seeds=1
+scp41  | HW2 novelty fitness alpha=0.7          | avg_cost=433.00 | best=433 | worst=433 | gap=0.00 | div=0.1408 | gens=101.0 | avg_mut=0.0150 | avg_g=0.1694 | time=87.82s | feasible=True | seeds=1
+scp41  | HW2 fast nonlinear mutation            | avg_cost=433.00 | best=433 | worst=433 | gap=0.00 | div=0.0601 | gens=101.0 | avg_mut=0.0218 | avg_g=0.0000 | time=21.93s | feasible=True | seeds=1
+scp41  | HW2 fast nonlinear + novelty alpha=0.7 | avg_cost=432.00 | best=432 | worst=432 | gap=0.00 | div=0.1550 | gens=101.0 | avg_mut=0.0218 | avg_g=0.1931 | time=88.81s | feasible=True | seeds=1
+scp41  | HW2 age-based individual mutation      | avg_cost=433.00 | best=433 | worst=433 | gap=0.00 | div=0.0729 | gens=101.0 | avg_mut=0.0150 | avg_g=0.0000 | time=18.40s | feasible=True | seeds=1
+scp51  | HW2 novelty fitness alpha=0.6          | avg_cost=260.00 | best=260 | worst=260 | gap=5.00 | div=0.2000 | gens=220.0 | avg_mut=0.0150 | avg_g=0.2259 | time=361.86s | feasible=True | seeds=1
+scp51  | HW2 novelty fitness alpha=0.7          | avg_cost=255.00 | best=255 | worst=255 | gap=0.00 | div=0.1664 | gens=205.0 | avg_mut=0.0150 | avg_g=0.1809 | time=327.37s | feasible=True | seeds=1
+scp51  | HW2 fast nonlinear mutation            | avg_cost=262.00 | best=262 | worst=262 | gap=7.00 | div=0.0402 | gens=114.0 | avg_mut=0.0210 | avg_g=0.0000 | time=37.37s | feasible=True | seeds=1
+scp51  | HW2 fast nonlinear + novelty alpha=0.7 | avg_cost=255.00 | best=255 | worst=255 | gap=0.00 | div=0.1111 | gens=267.0 | avg_mut=0.0142 | avg_g=0.2104 | time=434.42s | feasible=True | seeds=1
+scp51  | HW2 age-based individual mutation      | avg_cost=262.00 | best=262 | worst=262 | gap=7.00 | div=0.0746 | gens=101.0 | avg_mut=0.0150 | avg_g=0.0000 | time=28.42s | feasible=True | seeds=1
+scpa3  | HW2 novelty fitness alpha=0.6          | avg_cost=236.00 | best=236 | worst=236 | gap=2.00 | div=0.1981 | gens=170.0 | avg_mut=0.0150 | avg_g=0.2580 | time=450.95s | feasible=True | seeds=1
+scpa3  | HW2 novelty fitness alpha=0.7          | avg_cost=238.00 | best=238 | worst=238 | gap=4.00 | div=0.1940 | gens=137.0 | avg_mut=0.0150 | avg_g=0.2400 | time=358.08s | feasible=True | seeds=1
+scpa3  | HW2 fast nonlinear mutation            | avg_cost=233.00 | best=233 | worst=233 | gap=0.00 | div=0.0107 | gens=318.0 | avg_mut=0.0128 | avg_g=0.0000 | time=166.55s | feasible=True | seeds=1
+scpa3  | HW2 fast nonlinear + novelty alpha=0.7 | avg_cost=243.00 | best=243 | worst=243 | gap=9.00 | div=0.2253 | gens=116.0 | avg_mut=0.0208 | avg_g=0.3802 | time=314.95s | feasible=True | seeds=1
+scpa3  | HW2 age-based individual mutation      | avg_cost=235.00 | best=235 | worst=235 | gap=1.00 | div=0.2575 | gens=212.0 | avg_mut=0.0150 | avg_g=0.0000 | time=165.95s | feasible=True | seeds=1
+
+
+================ OVERALL HW2 CANDIDATE RANKING ================
+config | avg_cost | total_gap | avg_gap | avg_div | avg_time
+--------------------------------------------------------------------------------------------------------------------------------------------
+HW2 novelty fitness alpha=0.7          | avg_cost=308.67 | total_gap=4.00 | avg_gap=1.33 | avg_div=0.1670 | avg_time=257.76s
+HW2 fast nonlinear mutation            | avg_cost=309.33 | total_gap=7.00 | avg_gap=2.33 | avg_div=0.0370 | avg_time=75.28s
+HW2 novelty fitness alpha=0.6          | avg_cost=309.67 | total_gap=7.00 | avg_gap=2.33 | avg_div=0.1898 | avg_time=300.11s
+HW2 age-based individual mutation      | avg_cost=310.00 | total_gap=8.00 | avg_gap=2.67 | avg_div=0.1350 | avg_time=70.92s
+HW2 fast nonlinear + novelty alpha=0.7 | avg_cost=310.00 | total_gap=9.00 | avg_gap=3.00 | avg_div=0.1638 | avg_time=279.40s
+
+Recommended HW2 best config:
+HW2 novelty fitness alpha=0.7
+
+Saved detailed results to: results\hw2_best_candidates_detailed.csv
+Saved summary results to: results\hw2_best_candidates_summary.csv
+Saved overall results to: results\hw2_best_candidates_overall.csv
+Total runtime: 2950.45 seconds
+
+Process finished with exit code 0
